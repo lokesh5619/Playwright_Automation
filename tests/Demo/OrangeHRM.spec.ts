@@ -17,7 +17,9 @@ test('OrangeHRM Login', async ({ page }) => {
     await expect(page.getByRole('heading',{name:'Dashboard'})).toBeVisible();
 
     //Dropdown <--to--> Logout 
-    await page.locator('.oxd-userdropdown-tab').click();
+    const menuDropDown = page.locator('.oxd-userdropdown-tab');
+    
+    await menuDropDown.click();
 
     await page.getByRole('menuitem',{name:'Logout'}).click();
     
@@ -27,9 +29,15 @@ test('OrangeHRM Login', async ({ page }) => {
     // Again login
     await userLogin.fill('Admin');
 
-    await userPassword.fill('admin123');
+    await userPassword.fill('admin123');    
+
+    // Again open menu to change a password
+    await menuDropDown.click();
     
-    await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+    await page.getByRole('menuitem',{name:'Change Password'}).click();
+    
+    
+    await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/PIM");
     
     
     
