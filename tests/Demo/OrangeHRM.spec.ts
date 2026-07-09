@@ -44,12 +44,6 @@ test('OrangeHRM Login', async ({ page }) => {
     
     await page.getByText('Update Password').isVisible();
 
-    await page.locator('.oxd-input-group.oxd-input-field-bottom-space').filter({hasText:'Current Password'}).locator('input').fill('admin123');
-
-    await page.locator('.oxd-input-group.oxd-input-field-bottom-space').filter({hasText:'Password'}).locator('input').fill('lokesh123');
-
-    await page.locator('.oxd-input-group.oxd-input-field-bottom-space').filter({hasText:'Confirm Password'}).locator('input').fill('lokesh123');
-
     await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/pim");
     
     
