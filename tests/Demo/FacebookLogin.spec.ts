@@ -15,15 +15,27 @@ test('facebookLogin',async({page}) => {
 
     await page.locator("//label[text()='Surname']//preceding-sibling::input").fill('Vishawakarma');
 
-    // await page.locator("//div[@role='combobox'][child::span[text()='Day']]").dblclick();   // nhi chala X
-    
-    // await page.locator("//span[text()='Day']/parent::div").click();   // chal gya
+    await page.locator("//span[text()='Day']/ancestor::div[@role='combobox']").click(); 
 
-    await page.locator("//span[text()='Day']/ancestor::div[@role='combobox']").click();  // chal gya
-    
+    await page.locator("//div[text()='5']").click();
+   
+    await page.locator("//span[text()='Month']/ancestor::div[@role='combobox']").click(); 
+
+    await page.locator("//div[text()='October']").click();
+   
+    await page.locator("//span[text()='Year']/ancestor::div[@role='combobox']").click();
+
+    await page.locator("//div[text()='2004']").click();
+
+    await page.locator("//span[text()='Select your gender']/ancestor::div[@role='combobox']").click();
+
+    await page.locator("//div[text()='Male']").click();
+
     await page.locator("//label[text()='Mobile number or email address']//preceding-sibling::input").fill('6263659258');
     
-    await page.locator("//label[text()='Mobile number or email address']//preceding-sibling::input").fill('');
+    await page.locator("//label[text()='Password']//preceding-sibling::input").fill('lokesh@123');
+
+    
 
 
     // await page.locator("//div[text()='3']/ancestor::div[@role='listbox']").click();  // chal gya
