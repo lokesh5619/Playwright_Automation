@@ -11,7 +11,9 @@ test('facebookLogin',async({page}) => {
     //Create new account
     await page.locator("//span[text()='Create new account']").click();
 
-    await page.locator("//span[text()='Get started on Facebook']").isVisible();
+    const newAccount = page.locator("//span[text()='Get started on Facebook']");
+
+    console.log(await newAccount.isVisible());
 
     //First name
     await page.locator("//label[text()='First name']//preceding-sibling::input").fill('Lokesh');
