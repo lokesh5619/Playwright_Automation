@@ -39,7 +39,7 @@ test('facebookLogin',async({page}) => {
 
     await page.locator("//div[text()='Male']").click();
 
-    //Enter mobile name
+    //Enter mobile nunmber
     await page.locator("//label[text()='Mobile number or email address']//preceding-sibling::input").fill('6263659258');
     
     //Enter Password
