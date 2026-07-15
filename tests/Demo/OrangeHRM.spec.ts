@@ -84,7 +84,7 @@ test('OrangeHRM Login', async ({ page }) => {
     await page.waitForTimeout(5000);
     
     
-    console.log("Enter username name you are changing");
+    console.log("Enter username you are changing");
     await page.locator("//h6[text()='Edit User']//following::input[2]").fill("lokesh");
     await page.waitForTimeout(3000);
     
