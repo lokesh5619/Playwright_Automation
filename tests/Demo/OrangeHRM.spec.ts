@@ -39,21 +39,25 @@ test('OrangeHRM Login', async ({ page }) => {
     await page.locator("[class='oxd-form']>div>div>:nth-child(3)>div>:last-child>div>div>:last-child").click();
     await page.locator("[role='listbox']>div:nth-child(2)").click();
     
-
-    console.log("Click on Username Enter username");
-    await page.locator("[class='oxd-form']>div>div>:nth-child(4)>div>:last-child>input").fill("lokesh__111");
     
-
+    console.log("Click on Username Enter username");
+    await page.locator("//h6[text()='Add User']//following::input[2]").fill("lokesh__111111");
+    await page.waitForTimeout(2000);
+    
+    
     console.log("Enter the Password");
     await page.locator("(//input[@type='password'])[1]").fill("lokesh@1234567");
+    await page.waitForTimeout(2000);
     
     
     console.log("Enter the Confirm Password");
     await page.locator("(//input[@type='password'])[2]").fill("lokesh@1234567");
+    await page.waitForTimeout(2000);
     
-
+    
     console.log("Click on the Save button");
     await page.locator("[type='submit']").click();
+    await page.waitForTimeout(2000);
     
     console.log("<-------USER CREATED DONE------->");
     
@@ -63,9 +67,10 @@ test('OrangeHRM Login', async ({ page }) => {
     await page.waitForLoadState('networkidle')
     
     console.log("Search user");
-    await page.locator("(//label[text()='Username']//following::div//input)[1]").fill("lokesh__111");
+    await page.locator("//h5[text()='System Users']//following::input[1]").fill("lokesh__111111");
     await page.waitForTimeout(1000);
     
+
     console.log("Click on Search button to search user");
     await page.locator("[type='submit']").click();
     await page.waitForTimeout(2000);
@@ -78,8 +83,9 @@ test('OrangeHRM Login', async ({ page }) => {
     await page.locator("(//button[@type='button']//i)[6]").click();
     await page.waitForTimeout(5000);
     
+    
     console.log("Enter username name you are changing");
-    await page.locator("(//label[text()='Username']//following::input)[1]").fill("lokesh");
+    await page.locator("//h6[text()='Edit User']//following::input[2]").fill("lokesh");
     await page.waitForTimeout(3000);
     
     
@@ -93,7 +99,7 @@ test('OrangeHRM Login', async ({ page }) => {
     await page.waitForTimeout(5000);    
     
     console.log("Enter User name you want to delete");
-    await page.locator("(//label[text()='Username']//following::div//input)[1]").fill("lokesh");    
+    await page.locator("//h5[text()='System Users']//following::input[1]").fill("lokesh");    
     await page.waitForTimeout(2000);
     
     
