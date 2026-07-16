@@ -20,6 +20,7 @@ test.describe.serial('OrangeHRM',()=>{
         
         const loginButton = page.getByRole('button', { name: 'Login' });
         await loginButton.click();
+
     
     });
 
@@ -141,7 +142,8 @@ test.describe.serial('OrangeHRM',()=>{
     test.afterAll(async()=>{
         await page.locator("//button[text()=' Upgrade']//following::li[1]").click();
         await page.waitForTimeout(5000);
-        await page.locator("//ul[@role='menu']//li[1]").click();
+        await page.locator("[role='menu']>li:nth-child(4)").click();
+        await page.waitForTimeout(5000);
         console.log("<------- LogOut Successful ------->");
     });
 })
