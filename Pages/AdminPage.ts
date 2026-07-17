@@ -1,6 +1,7 @@
 import {Page , Locator , Expect} from '@playwright/test';
 import { Test_Configu, UserDetails } from '../Config/test-config';
-import { LeftPanel } from './LeftPanel';
+import { LeftPanel } from './LeftPanelPage';
+import { ProfileIcon } from './ProfileIcon';
 
 export class AdminPage
 {

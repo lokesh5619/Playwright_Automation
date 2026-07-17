@@ -2,7 +2,8 @@ import {test,expect,Page} from '@playwright/test';
 import { LoginPage } from '../../Pages/LoginPage';
 import { Test_Configu } from '../../Config/test-config';
 import { AdminPage } from '../../Pages/AdminPage';
-import { LeftPanel } from '../../Pages/LeftPanel';
+import { LeftPanel } from '../../Pages/LeftPanelPage';
+import { ProfileIcon } from '../../Pages/ProfileIcon';
 
 test.describe.serial('OrangeHRM',()=>{
     
@@ -29,7 +30,7 @@ test.describe.serial('OrangeHRM',()=>{
     })
 
     
-    test('ADMIN PANEL',async({})=>{
+    test('TC-01 | ADMIN PANEL',async({})=>{
 
         const leftPanel = new LeftPanel(page);
         await leftPanel.clickOnAdmin();
@@ -101,6 +102,7 @@ test.describe.serial('OrangeHRM',()=>{
     })
     
     test.afterAll(async({})=>{
-
+        const selectProfileOption = new ProfileIcon(page);
+        await selectProfileOption.clickOnLogout();
     })
 })
