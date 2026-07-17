@@ -1,5 +1,6 @@
 import {Page , Locator , Expect} from '@playwright/test';
 import { Test_Configu, UserDetails } from '../Config/test-config';
+import { LeftPanel } from './LeftPanel';
 
 export class AdminPage
 {
@@ -7,13 +8,6 @@ export class AdminPage
     constructor(page:Page)
     {
         this.page=page;
-    }
-
-    async clickOnAdminInLeftPanel()
-    {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(1)");
-        await adminClick.click();
     }
 
     async clickOnAddButton()

@@ -2,6 +2,7 @@ import {test,expect,Page} from '@playwright/test';
 import { LoginPage } from '../../Pages/LoginPage';
 import { Test_Configu } from '../../Config/test-config';
 import { AdminPage } from '../../Pages/AdminPage';
+import { LeftPanel } from '../../Pages/LeftPanel';
 
 test.describe.serial('OrangeHRM',()=>{
     
@@ -30,9 +31,10 @@ test.describe.serial('OrangeHRM',()=>{
     
     test('ADMIN PANEL',async({})=>{
 
+        const leftPanel = new LeftPanel(page);
+        await leftPanel.clickOnAdmin();
+
         const adminPanel = new AdminPage(page);
-        await adminPanel.clickOnAdminInLeftPanel();
-        await page.waitForTimeout(2000);
         
         await adminPanel.clickOnAddButton();
         await page.waitForTimeout(2000);
