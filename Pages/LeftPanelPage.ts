@@ -1,6 +1,6 @@
 import {Page , Expect, Locator} from '@playwright/test';
 
-export class LeftPanel
+export class LeftPanelPage
 {
     page:Page;
      

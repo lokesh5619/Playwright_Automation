@@ -1,6 +1,6 @@
-import {Page , Locator , Expect} from '@playwright/test';
+import {Page , Locator , expect} from '@playwright/test';
 import { Test_Configu, UserDetails } from '../Config/test-config';
-import { LeftPanel } from './LeftPanelPage';
+import { LeftPanelPage } from './LeftPanelPage';
 import { ProfileIcon } from './ProfileIcon';
 
 export class AdminPage
@@ -15,6 +15,7 @@ export class AdminPage
     {
         console.log("Click on add button to Add user");
         const clickAdd = this.page.locator("[id=app]>div>:last-child>div>div>div:last-child>div>button");
+        await expect(this.page.getByRole('button',{name:'Add'})).toBeVisible();
         await clickAdd.click();  
     }
 
@@ -65,7 +66,7 @@ export class AdminPage
     {
         console.log("Enter the Confirm Password");
         const enterConfirmPassword = this.page.locator("(//input[@type='password'])[2]");
-        enterConfirmPassword.fill(UserDetails.passwordIn_ADD);
+        await enterConfirmPassword.fill(UserDetails.passwordIn_ADD);
     }
 
     async clickOnSaveButtonInAdminPanel_ADD()
