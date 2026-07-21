@@ -4,15 +4,11 @@ import { LeftPanelPage } from '../Pages/LeftPanelPage';
 import { PimPage } from '../Pages/PimPage';
 import { PIM_Details } from '../Config/test-config';
 
-
 class PimHRM2Test extends BaseSetup
 { 
     override defineTest(): void {
-
         test.describe.serial('PIMHRM',async()=>{
-
             let pimPage : PimPage;
-
             test('TC-01 | ADD USER',async({})=>{
                  const pimPanel =new LeftPanelPage(this.page);
                         await pimPanel.clickOnPIM();
@@ -39,5 +35,4 @@ class PimHRM2Test extends BaseSetup
         })
     }
 }
-
 new PimHRM2Test().register();
