@@ -1,0 +1,4 @@
+----- Before Each Test Case -----
+Search user
+Click on Search button to search user
+----- After Each Test Case -----

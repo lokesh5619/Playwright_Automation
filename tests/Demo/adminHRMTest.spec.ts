@@ -1,9 +1,11 @@
 import {test,expect,Page} from '@playwright/test';
-import { LoginPage } from '../../Pages/LoginPage';
-import { Test_Configu, UserDetails } from '../../Config/test-config';
-import { AdminPage } from '../../Pages/AdminPage';
-import { LeftPanelPage } from '../../Pages/LeftPanelPage';
-import { ProfileIcon } from '../../Pages/ProfileIcon';
+import { LoginPage } from '.././Pages/LoginPage';
+import { Test_Configu, UserDetails } from '.././Config/test-config';
+import { AdminPage } from '.././Pages/AdminPage';
+import { LeftPanelPage } from '.././Pages/LeftPanelPage';
+import { ProfileIcon } from '.././Pages/ProfileIcon';
+// import { test } from '@playwright/test';
+
 
 test.describe.serial('OrangeHRM',()=>{
     
@@ -36,6 +38,7 @@ test.describe.serial('OrangeHRM',()=>{
 
     
     test('TC-01 | ADD USER',async({})=>{
+
         adminPanel = new AdminPage(page);
         const leftPanel = new LeftPanelPage(page);
         await leftPanel.clickOnAdmin();

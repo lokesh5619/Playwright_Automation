@@ -1,0 +1,5 @@
+----- Before Each Test Case -----
+Click on Update icon to update user details
+Enter username you are changing
+Click on save button to save updates details
+----- After Each Test Case -----

@@ -1,0 +1,3 @@
+----- Before Each Test Case -----
+Enter User name you want to delete
+----- After Each Test Case -----

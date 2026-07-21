@@ -1,0 +1,11 @@
+----- Before Each Test Case -----
+Click on Admin tab in left panel.
+Click on add button to Add user
+Click on User Role and Select the role-->Admin
+Click on Employee name and Select the name
+Click on Status and Select Status--> Enabled
+Click on Username Enter username
+Enter the Password
+Enter the Confirm Password
+Click on the Save button
+----- After Each Test Case -----
