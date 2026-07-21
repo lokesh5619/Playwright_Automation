@@ -1,0 +1,6 @@
+----- Before Each Test Case -----
+Enter User name you want to delete
+Click on Search button 
+Click on Delete icon to delete user detail
+User deleted succesfully
+----- After Each Test Case -----

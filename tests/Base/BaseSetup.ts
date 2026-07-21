@@ -59,12 +59,26 @@ export class BaseSetup{
         await this.page.waitForLoadState('domcontentloaded');  // wait for page
         await this.page.waitForTimeout(1000);                  // small buffer
 
-        const screenshot = await this.page.screenshot({ 
-            fullPage: true,
-            animations: 'disabled'   // stops animated elements from causing blank frames
-        });
+        
+
+  const testInfo = test.info();
+
+  if (testInfo.status !== testInfo.expectedStatus) {
+    const screenshot = await this.page.screenshot({ fullPage: true });
+    await attachment(`FAILED - ${testInfo.title}`, screenshot, 'image/png');
+  }
+
   
-        await attachment('Screenshot', screenshot, 'image/png');
+  
+  
+  
+  
+        // const screenshot = await this.page.screenshot({ 
+        //     fullPage: true,
+        //     animations: 'disabled'   // stops animated elements from causing blank frames
+        // });
+  
+        // await attachment('Screenshot', screenshot, 'image/png');
   
 
         // const screenshot = await this.page.screenshot({ fullPage: true });

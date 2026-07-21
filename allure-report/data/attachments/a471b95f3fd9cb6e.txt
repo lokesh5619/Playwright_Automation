@@ -1,0 +1,3 @@
+----- Before Each Test Case -----
+Search user
+----- After Each Test Case -----
