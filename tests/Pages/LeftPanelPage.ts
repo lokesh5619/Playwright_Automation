@@ -11,9 +11,7 @@ export class LeftPanelPage
 
     async clickOnAdmin()
     {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(1)");
-        await adminClick.click();
+    
     }
     async clickOnPIM()
     {

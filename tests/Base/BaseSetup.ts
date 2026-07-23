@@ -93,7 +93,7 @@ export class BaseSetup{
 
         await this.context?.close();
     }
-    defineTest():void{
+    defineTests():void{
 
     }
 }

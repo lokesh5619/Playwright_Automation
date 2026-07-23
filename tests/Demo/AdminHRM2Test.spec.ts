@@ -8,7 +8,7 @@ import { feature, story, severity, label, step } from 'allure-js-commons';
 
 class AdminHRM2Test extends BaseSetup
 {
-    override defineTest(): void {
+    override defineTests(): void {
         
         
         test.describe.serial('AdminHRM',()=>{

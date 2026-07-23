@@ -6,7 +6,7 @@ import { PIM_Details } from '../Config/test-config';
 
 class PimHRM2Test extends BaseSetup
 { 
-    override defineTest(): void {
+    override defineTests(): void {
         test.describe.serial('PIMHRM',async()=>{
             let pimPage : PimPage;
             test('TC-01 | ADD USER',async({})=>{
