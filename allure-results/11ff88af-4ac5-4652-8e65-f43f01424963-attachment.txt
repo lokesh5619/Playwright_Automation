@@ -1,0 +1,5 @@
+----- Before Each Test Case -----
+Click on Admin tab in left panel.
+Click on PIM tab in left panel.
+Click on Time tab in left panel.
+----- After Each Test Case -----

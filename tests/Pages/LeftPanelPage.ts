@@ -1,82 +1,72 @@
-import {Page , Expect, Locator} from '@playwright/test';
+import {Page , expect, Locator} from '@playwright/test';
+import { ProductUtils } from '../Utils/ProductUtils';
 
-export class LeftPanelPage
+export class LeftPanelPage extends ProductUtils
 {
-    page:Page;
+    // page:Page;
      
-    constructor(page:Page)
-    {
-        this.page=page;
-    }
+    // constructor(page:Page)
+    // {
+    //     this.page=page;
+    // }
 
     async clickOnAdmin()
     {
-    
+        await this.clickOnLeftPanelTab('Admin');
     }
+
+    async validateAdminPageVisibility()
+    {
+        await this.page.waitForTimeout(10000);
+        const isVisible = await this.page.locator("//h6[text()='Admin']").isVisible();
+        console.log('Admin page is visible'+ isVisible );   // true or false.  
+        await expect(this.page.locator("//h6[text()='Admin']")).toBeVisible();
+    }
+
     async clickOnPIM()
     {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(2)");
-        await adminClick.click();
+        await this.clickOnLeftPanelTab('PIM');
     }
+
+
+    async validatePIMPageVisibility()
+    {
+        await this.page.waitForTimeout(10000);
+        const isVisible = await this.page.locator("//h6[text()='PIM']").isVisible();
+        console.log('Admin page is visible'+ isVisible );   // true or false.  
+        await expect(this.page.locator("//h6[text()='PIM']")).toBeVisible();
+    }
+
+    
     async clickOnLeave()
     {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(3)");
-        await adminClick.click();
+        await this.clickOnLeftPanelTab('Leave');
     }
     async clickOnTime()
     {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(4)");
-        await adminClick.click();
     }
     async clickOnRecruitment()
     {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(5)");
-        await adminClick.click();
     }
     async clickOnMyInfo()
     {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(6)");
-        await adminClick.click();
     }
     async clickOnMyPerformance()
     {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(7)");
-        await adminClick.click();
     }
     async clickOnDashboard()
     {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(8)");
-        await adminClick.click();
     }
     async clickOnDirectory()
     {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(9)");
-        await adminClick.click();
     }
     async clickMaintenance()
     {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(10)");
-        await adminClick.click();
     }
     async clickOnClaim()
     {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(11)");
-        await adminClick.click();
     }
     async clickOnBuzz()
     {
-        console.log("Click on Admin tab in left panel.");
-        const adminClick = this.page.locator("[role='navigation']>div:last-child>:last-child>:nth-child(12)");
-        await adminClick.click();
     }
 }

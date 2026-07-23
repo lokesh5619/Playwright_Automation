@@ -29,7 +29,7 @@ export class BaseSetup{
             await self.afterAll();
         })
 
-        this.defineTest();
+        this.defineTests();
     }
 
     async beforeAll(browser : Browser):Promise<void>{
@@ -86,12 +86,12 @@ export class BaseSetup{
     }
 
     async afterAll():Promise<void>{
-        const logOut = new ProfileIcon(this.page);
-        await logOut.clickOnProfileIcon();
-        await logOut.clickOnLogout();
-        await this.page.waitForTimeout(5000);
+        // const logOut = new ProfileIcon(this.page);
+        // await logOut.clickOnProfileIcon();
+        // await logOut.clickOnLogout();
+        // await this.page.waitForTimeout(5000);
 
-        await this.context?.close();
+        // await this.context?.close();
     }
     defineTests():void{
 
