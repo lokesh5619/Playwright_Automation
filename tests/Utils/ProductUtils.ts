@@ -45,4 +45,12 @@ export class ProductUtils{
         await this.page.getByPlaceholder(`${placeholder}`).fill(`${value}`);
     }
 
+
+    async validatePageVisibility(headerName: string)
+    {
+    //   await this.page.waitForTimeout(10000);
+      const isVisible = await this.page.locator(`//h6[text()='${headerName}']`).isVisible();
+      console.log(`${headerName} page is visible ${isVisible}` );   // true or false.  
+      await expect(this.page.locator(`//h6[text()='${headerName}']`)).toBeVisible();
+    }
 }

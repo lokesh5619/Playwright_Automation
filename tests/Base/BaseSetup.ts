@@ -1,4 +1,4 @@
-import {test , Browser , BrowserContext , Page} from '@playwright/test';
+import {expect,test , Browser , BrowserContext , Page} from '@playwright/test';
 import { LoginPage } from '../Pages/LoginPage';
 import { Test_Configu } from '../Config/test-config';
 import { ProfileIcon } from '../Pages/ProfileIcon';
@@ -38,13 +38,18 @@ export class BaseSetup{
 
         await this.page.goto(Test_Configu.baseURL);
         await this.page.waitForLoadState('networkidle');
-        await this.page.waitForLoadState('networkidle');
-                
+        await expect.soft(this.page).toHaveURL('/Dashboard/');
+        
+        await expect(this.page.locator("//h5[text()='Login']")).toBeVisible();        
         const loginPage = new LoginPage(this.page);
+
         await loginPage.enterUserName(Test_Configu.username);
-                
+        await expect.soft(this.page.locator("input[name=username]")).toHaveValue('Admin');
+        
         await loginPage.enterUserPassword(Test_Configu.password);
-                
+        await expect(this.page.locator("input[name=password]")).toHaveValue('admin123');
+        
+        await expect(this.page.getByRole('button',{name:'Login'})).toBeVisible();
         await loginPage.clickOnLoginButton();
         await this.page.waitForTimeout(5000);
         

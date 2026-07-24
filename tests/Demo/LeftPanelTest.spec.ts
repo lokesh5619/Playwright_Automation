@@ -18,10 +18,21 @@ class LeftPanelTest extends BaseSetup{
                 leftPanelTab = new LeftPanelPage(this.page);
 
                 await leftPanelTab.clickOnLeftPanelTab('Admin');
-                await this.page.waitForTimeout(3000);
+                // await this.page.waitForTimeout(3000);
                 await leftPanelTab.validateAdminPageVisibility();
                 
-                await leftPanelTab.clickOnButton('Add');
+                await leftPanelTab.clickOnLeftPanelTab('PIM');
+                // await this.page.waitForTimeout(3000);
+                await leftPanelTab.validatePIMPageVisibility();
+                
+                await leftPanelTab.clickOnLeftPanelTab('Leave');
+                // await this.page.waitForTimeout(3000);
+                await leftPanelTab.validateLeavePageVisibility();
+                
+                await leftPanelTab.clickOnLeftPanelTab('Time');
+                // await this.page.waitForTimeout(3000);
+                await leftPanelTab.validateTimePageVisibility();
+                
                 await this.page.waitForTimeout(3000);
 
             

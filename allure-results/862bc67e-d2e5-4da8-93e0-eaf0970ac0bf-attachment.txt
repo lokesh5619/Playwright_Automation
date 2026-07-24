@@ -1,0 +1,10 @@
+----- Before Each Test Case -----
+Click on Admin tab in left panel.
+Admin page is visible false
+Click on PIM tab in left panel.
+PIM page is visible false
+Click on Leave tab in left panel.
+Leave page is visible false
+Click on Time tab in left panel.
+Time page is visible false
+----- After Each Test Case -----
