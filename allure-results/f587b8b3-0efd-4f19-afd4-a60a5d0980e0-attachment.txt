@@ -1,0 +1,5 @@
+----- Before Each Test Case -----
+Click on Admin tab in left panel.
+Click on Admin tab in left panel.
+Admin page is visibletrue
+----- After Each Test Case -----

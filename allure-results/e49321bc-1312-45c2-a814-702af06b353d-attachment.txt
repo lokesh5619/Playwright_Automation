@@ -1,0 +1,4 @@
+----- Before Each Test Case -----
+Click on PIM tab in left panel.
+Admin page is visibletrue
+----- After Each Test Case -----

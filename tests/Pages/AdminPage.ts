@@ -1,5 +1,6 @@
 import {Page , Locator , expect} from '@playwright/test';
 import { Test_Configu, UserDetails } from '../Config/test-config';
+import { ProductUtils } from '../Utils/ProductUtils';
 
 export class AdminPage
 {
@@ -35,7 +36,6 @@ export class AdminPage
         const selectEmployeeType = this.page.locator("[role='listbox']>:nth-child(1)");
         await selectEmployeeType.click();
     }
-
 
     async selectStatusInAdminPanel_ADD()
     {

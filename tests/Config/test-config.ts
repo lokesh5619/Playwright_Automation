@@ -1,3 +1,5 @@
+import { RandomDataUtil } from "../Utils/Randomutils"
+
 export const Test_Configu = {
     baseURL:'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
     username:'Admin',
@@ -6,7 +8,7 @@ export const Test_Configu = {
 
 export const UserDetails = {
     employeeName : 'a',
-    usernameIn_ADD : 'lokesh_1221',
+    usernameIn_ADD : RandomDataUtil.username(),
     passwordIn_ADD : 'lokesh@12345',
     updateName: 'lokesh'
 }

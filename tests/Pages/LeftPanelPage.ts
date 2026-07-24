@@ -19,7 +19,7 @@ export class LeftPanelPage extends ProductUtils
     {
         await this.page.waitForTimeout(10000);
         const isVisible = await this.page.locator("//h6[text()='Admin']").isVisible();
-        console.log('Admin page is visible'+ isVisible );   // true or false.  
+        console.log(`Admin page is visible ${isVisible}`);   // true or false.  
         await expect(this.page.locator("//h6[text()='Admin']")).toBeVisible();
     }
 
@@ -33,7 +33,7 @@ export class LeftPanelPage extends ProductUtils
     {
         await this.page.waitForTimeout(10000);
         const isVisible = await this.page.locator("//h6[text()='PIM']").isVisible();
-        console.log('Admin page is visible'+ isVisible );   // true or false.  
+        console.log(`Admin page is visible ${isVisible}`);   // true or false.  
         await expect(this.page.locator("//h6[text()='PIM']")).toBeVisible();
     }
 

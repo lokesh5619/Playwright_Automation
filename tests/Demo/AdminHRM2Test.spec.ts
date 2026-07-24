@@ -4,6 +4,7 @@ import { BaseSetup } from "../Base/BaseSetup";
 import { AdminPage } from "../Pages/AdminPage";
 import { LeftPanelPage } from "../Pages/LeftPanelPage"; 
 import { feature, story, severity, label, step } from 'allure-js-commons';
+import { AdminPage2 } from "../Pages/AdminPage2";
 
 
 class AdminHRM2Test extends BaseSetup
@@ -11,9 +12,9 @@ class AdminHRM2Test extends BaseSetup
     override defineTests(): void {
         
         
-        test.describe.serial('AdminHRM',()=>{
+        test.describe.serial('AdminHRM_222',()=>{
             
-            let adminPanel:AdminPage;
+            let adminPanel:AdminPage2;
 
             test('TC-01 | ADD USER',async({})=>{
 
@@ -24,7 +25,7 @@ class AdminHRM2Test extends BaseSetup
                 const leftPanel = new LeftPanelPage(this.page);
                 await leftPanel.clickOnAdmin();
 
-                adminPanel = new AdminPage(this.page);
+                adminPanel = new AdminPage2(this.page);
                 await adminPanel.clickOnAddButton();
                 await this.page.waitForTimeout(2000);
                 await adminPanel.selectUserRoleInAdminPanel_ADD();

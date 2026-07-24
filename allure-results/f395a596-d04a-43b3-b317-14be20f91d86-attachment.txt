@@ -1,0 +1,4 @@
+----- Before Each Test Case -----
+Click on Delete icon to delete user detail
+User deleted succesfully
+----- After Each Test Case -----
