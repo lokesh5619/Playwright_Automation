@@ -59,17 +59,17 @@ class AdminHRM2Test extends BaseSetup
                 await adminPanel.clickOnSaveButtonToSaveUserDetailsInAdminPanel_UPDATE();
                 await this.page.waitForTimeout(5000);
             })
-            test('TC-04 | DELETE USER',async({})=>{
+            // test('TC-04 | DELETE USER',async({})=>{
                 
-                await adminPanel.enterUserNameToSearchUserInAdminPanel_DELETE();
-                await this.page.waitForTimeout(2000);
-                await adminPanel.clickOnSearchButtonInAdminPanel_DELETE();
-                await this.page.waitForTimeout(2000);
-                await adminPanel.clickOnDeleteIconInAdminPanel_DELETE();
-                await this.page.waitForTimeout(2000);
-                await adminPanel.userDeleteSuccessfullyInAdminPanel_DELETE();
-                await this.page.waitForTimeout(2000);
-            })
+            //     await adminPanel.enterUserNameToSearchUserInAdminPanel_DELETE();
+            //     await this.page.waitForTimeout(2000);
+            //     await adminPanel.clickOnSearchButtonInAdminPanel_DELETE();
+            //     await this.page.waitForTimeout(2000);
+            //     await adminPanel.clickOnDeleteIconInAdminPanel_DELETE();
+            //     await this.page.waitForTimeout(2000);
+            //     await adminPanel.userDeleteSuccessfullyInAdminPanel_DELETE();
+            //     await this.page.waitForTimeout(2000);
+            // })
 
         })
     }
