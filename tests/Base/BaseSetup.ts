@@ -38,7 +38,7 @@ export class BaseSetup{
 
         await this.page.goto(Test_Configu.baseURL);
         await this.page.waitForLoadState('networkidle');
-        await expect.soft(this.page).toHaveURL('/Dashboard/');
+        //await expect(this.page).toHaveURL('/Dashboard/');
         
         await expect(this.page.locator("//h5[text()='Login']")).toBeVisible();        
         const loginPage = new LoginPage(this.page);

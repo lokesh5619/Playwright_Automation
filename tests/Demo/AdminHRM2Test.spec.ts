@@ -16,7 +16,7 @@ class AdminHRM2Test extends BaseSetup
             
             let adminPanel:AdminPage2;
 
-            test('TC-01 | ADD USER',async({})=>{
+                test('TC-01 | ADD USER',async({})=>{
 
                 await feature('User Management');
                 await story('Add User');
