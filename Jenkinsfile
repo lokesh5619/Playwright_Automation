@@ -22,8 +22,8 @@ pipeline {
         }
 
         stage('Run Playwright Tests') {
-            steps {
-                bat 'npx playwright test tests/Demo/AdminTests.spec.ts --headed --project=chromium'
+             steps {
+                bat 'npx playwright test tests/Demo/AdminHRM2Test.spec.ts --project=chromium'
             }
         }
     }
