@@ -11,13 +11,13 @@ export class LoginPage{
 
     async enterUserName(nameValue : string)
     {
-        const userLogin = this.page.getByPlaceholder("username");
+        const userLogin = this.page.getByPlaceholder("Username");
         await userLogin.fill(nameValue);
     }
     
     async enterUserPassword(passValue : string)
     {
-        const userPassword = this.page.getByPlaceholder("password");
+        const userPassword = this.page.getByPlaceholder("Password");
         await userPassword.fill(passValue);
     }
     

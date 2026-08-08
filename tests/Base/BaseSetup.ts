@@ -37,8 +37,8 @@ export class BaseSetup{
         this.page =await this.context.newPage();
 
         console.log('url : ' + Test_Configu.baseURL);
-        console.log('username'+Test_Configu.username);
-        console.log('password'+Test_Configu.password);
+        console.log('username : ' + Test_Configu.username);
+        console.log('password : '+  Test_Configu.password);
         
         await this.page.goto(Test_Configu.baseURL);
         await this.page.waitForLoadState('networkidle');
