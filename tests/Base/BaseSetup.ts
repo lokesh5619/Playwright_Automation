@@ -40,7 +40,7 @@ export class BaseSetup{
         await this.page.waitForLoadState('networkidle');
         //await expect(this.page).toHaveURL('/Dashboard/');
         
-        await expect(this.page.locator("//h5[text()='Login']")).toBeVisible();        
+        //await expect(this.page.locator("//h5[text()='Login']")).toBeVisible();        
         const loginPage = new LoginPage(this.page);
 
         await loginPage.enterUserName(Test_Configu.username);

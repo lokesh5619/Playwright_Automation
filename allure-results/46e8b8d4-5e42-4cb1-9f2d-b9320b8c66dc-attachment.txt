@@ -1,0 +1,6 @@
+----- Before Each Test Case -----
+Click on Admin tab in left panel.
+[safeClick] Waiting for element to be visible and clicking | locator: locator('//span[text()=\'Admin\']')
+[safeClick] click successfully | locator : locator('//span[text()=\'Admin\']')
+[safeCheck] Waiting for element to be visible and checking | locator: locator('xpath=(//input[@type=\'checkbox\'])[3]')
+----- After Each Test Case -----

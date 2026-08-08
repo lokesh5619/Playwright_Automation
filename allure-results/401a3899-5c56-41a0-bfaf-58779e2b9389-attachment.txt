@@ -1,0 +1,9 @@
+----- Before Each Test Case -----
+Click on Update icon to update user details
+Edit User page is visible true
+[safeFill] waiting for element to be visible and fill value : lokesh_123 | locator : locator('//label[text()=\'Username\']//following::input[1]')
+[safeFill] value is filled : lokesh_123 | locator : locator('//label[text()=\'Username\']//following::input[1]')
+[safeClick] Waiting for element to be visible and clicking | locator: getByRole('button', { name: 'Save' })
+[safeClick] click successfully | locator : getByRole('button', { name: 'Save' })
+System Users page is visible true
+----- After Each Test Case -----

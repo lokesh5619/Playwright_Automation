@@ -1,0 +1,33 @@
+----- Before Each Test Case -----
+Click on Admin tab in left panel.
+[safeClick] Waiting for element to be visible and clicking | locator: locator('//span[text()=\'Admin\']')
+[safeClick] click successfully | locator : locator('//span[text()=\'Admin\']')
+Admin page is visible true
+[safeClick] Waiting for element to be visible and clicking | locator: getByRole('button', { name: 'Add' })
+[safeClick] click successfully | locator : getByRole('button', { name: 'Add' })
+Click On Add Button
+Add User page is visible true
+[safeClick] Waiting for element to be visible and clicking | locator: locator('//label[text()=\'User Role\']//following::i[1]')
+[safeClick] click successfully | locator : locator('//label[text()=\'User Role\']//following::i[1]')
+[safeClick] Waiting for element to be visible and clicking | locator: locator('xpath=(//label[text()=\'User Role\']//following::span)[text()=\'Admin\']')
+[safeClick] click successfully | locator : locator('xpath=(//label[text()=\'User Role\']//following::span)[text()=\'Admin\']')
+Select User Name
+[safeFill] waiting for element to be visible and fill value : a | locator : locator('//label[text()=\'Employee Name\']//following::input[1]')
+[safeFill] value is filled : a | locator : locator('//label[text()=\'Employee Name\']//following::input[1]')
+[safeClick] Waiting for element to be visible and clicking | locator: locator('xpath=(//label[text()=\'Employee Name\']//following::div[@role=\'option\'])[2]')
+[safeClick] click successfully | locator : locator('xpath=(//label[text()=\'Employee Name\']//following::div[@role=\'option\'])[2]')
+Select On Employee Name
+[safeClick] Waiting for element to be visible and clicking | locator: locator('//label[text()=\'Status\']//following::i[1]')
+[safeClick] click successfully | locator : locator('//label[text()=\'Status\']//following::i[1]')
+[safeClick] Waiting for element to be visible and clicking | locator: locator('xpath=(//label[text()=\'Status\']//following::span)[text()=\'Enabled\']')
+[safeClick] click successfully | locator : locator('xpath=(//label[text()=\'Status\']//following::span)[text()=\'Enabled\']')
+[safeFill] waiting for element to be visible and fill value : user_tRgRhY | locator : locator('//label[text()=\'Username\']//following::input[1]')
+[safeFill] value is filled : user_tRgRhY | locator : locator('//label[text()=\'Username\']//following::input[1]')
+[safeFill] waiting for element to be visible and fill value : lokesh@12345 | locator : locator('//label[text()=\'Password\']//following::input[1]')
+[safeFill] value is filled : lokesh@12345 | locator : locator('//label[text()=\'Password\']//following::input[1]')
+[safeFill] waiting for element to be visible and fill value : lokesh@12345 | locator : locator('//label[text()=\'Confirm Password\']//following::input[1]')
+[safeFill] value is filled : lokesh@12345 | locator : locator('//label[text()=\'Confirm Password\']//following::input[1]')
+[safeClick] Waiting for element to be visible and clicking | locator: getByRole('button', { name: 'Save' })
+[safeClick] click successfully | locator : getByRole('button', { name: 'Save' })
+System Users page is visible true
+----- After Each Test Case -----

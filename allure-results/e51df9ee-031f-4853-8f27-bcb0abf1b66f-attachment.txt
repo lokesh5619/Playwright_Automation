@@ -1,0 +1,18 @@
+----- Before Each Test Case -----
+Click on Admin tab in left panel.
+[safeClick] Waiting for element to be visible and clicking | locator: locator('//span[text()=\'Admin\']')
+[safeClick] click successfully | locator : locator('//span[text()=\'Admin\']')
+Admin page is visible false
+Click on PIM tab in left panel.
+[safeClick] Waiting for element to be visible and clicking | locator: locator('//span[text()=\'PIM\']')
+[safeClick] click successfully | locator : locator('//span[text()=\'PIM\']')
+PIM page is visible false
+Click on Leave tab in left panel.
+[safeClick] Waiting for element to be visible and clicking | locator: locator('//span[text()=\'Leave\']')
+[safeClick] click successfully | locator : locator('//span[text()=\'Leave\']')
+Leave page is visible false
+Click on Time tab in left panel.
+[safeClick] Waiting for element to be visible and clicking | locator: locator('//span[text()=\'Time\']')
+[safeClick] click successfully | locator : locator('//span[text()=\'Time\']')
+Time page is visible false
+----- After Each Test Case -----

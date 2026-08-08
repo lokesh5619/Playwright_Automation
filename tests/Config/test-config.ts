@@ -10,7 +10,7 @@ export const UserDetails = {
     employeeName : 'a',
     usernameIn_ADD : RandomDataUtil.username(),
     passwordIn_ADD : 'lokesh@12345',
-    updateName: 'lokesh'
+    updateName: 'lokesh_123'
 }
 
 export const PIM_Details = {

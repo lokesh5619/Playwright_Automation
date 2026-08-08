@@ -1,28 +1,32 @@
 import {Page , Locator , expect} from '@playwright/test';
 import { Test_Configu, UserDetails } from '../Config/test-config';
 import { ProductUtils } from '../Utils/ProductUtils';
+import { SafeAction2 } from '../Utils/SafeAction2';
 
 export class AdminPage2 extends ProductUtils
 {
-    // page:Page;
-    // constructor(page:Page)
-    // {
-    //     this.page=page;
-    // }
+    
+    constructor(page:Page)
+    {
+        super(page);
+    }
 
     async clickOnAddButton()
     {
         await this.clickOnButton('Add');
+        console.log('Click On Add Button');
     }
-
+    
     async selectUserRoleInAdminPanel_ADD()
     {
         await this.selectDropDown('User Role', 'Admin');
+        console.log('Select User Name');
     }
     
     async selectEmployeeNameInAdminPanel_ADD()
     {
         await this.selectDropDownByText('Employee Name', UserDetails.employeeName , 2);
+        console.log('Select On Employee Name');
     }
 
     async selectStatusInAdminPanel_ADD()
@@ -109,6 +113,11 @@ export class AdminPage2 extends ProductUtils
         await this.clickOnButton('Search');
     }
 
+    async clickcheckBox()
+    {
+        await this.clickOnCheckBox(3);
+    }
+
     async clickOnDeleteIconInAdminPanel_DELETE()
     {
         console.log("Click on Delete icon to delete user detail");
@@ -122,6 +131,5 @@ export class AdminPage2 extends ProductUtils
         const userDelete = this.page.locator("//button[text()=' Yes, Delete ']");
         await userDelete.click();
     }
-
-    // <------ DELETE DONE ------->
+// <------ DELETE DONE ------->
 }

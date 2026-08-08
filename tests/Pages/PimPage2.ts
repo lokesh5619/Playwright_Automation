@@ -1,7 +1,6 @@
 import {Locator , expect, Page} from '@playwright/test';
 
 import { LoginPage } from './LoginPage';
-import { LeftPanelPage } from './LeftPanelPage';
 import { PIM_Details } from '../Config/test-config';
 import { ProductUtils } from '../Utils/ProductUtils';
 
@@ -23,7 +22,7 @@ export class PimPage2 extends ProductUtils{
         await imageUpload.setInputFiles("C:\Swing\Image");
         await this.page.waitForTimeout(3000);
     }
-
+    
     async clickOnAddButtonPimPAnel()
     {
         await this.clickOnButton('Add');
