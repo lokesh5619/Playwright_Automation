@@ -52,7 +52,7 @@ class AdminHRM2Test extends BaseSetup
                 await adminPanel.clickOnSaveButtonToSaveUserDetailsInAdminPanel_UPDATE();
                 await adminPanel.validatePageVisibility('System Users');
             })
-            test.only('TC-04 | DELETE USER',async({})=>{
+            test('TC-04 | DELETE USER',async({})=>{
                 // leftPanel = new LeftPanelPage(this.page);
                 // await leftPanel.clickOnAdmin();
                 // adminPanel = new AdminPage2(this.page);
