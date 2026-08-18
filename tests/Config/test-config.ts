@@ -1,9 +1,11 @@
 import { RandomDataUtil } from "../Utils/Randomutils"
 
 export const Test_Configu = {
-    baseURL:'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
-    username:'Admin',
-    password:'admin123'
+    baseURL: process.env.APP_BASE_URL || 'https://opensource-demo.orangehrmlive.com',
+    username: process.env.APP_USERNAME || 'Admin',
+    password: process.env.APP_PASSWORD || 'admin123',
+    browser: process.env.APP_BROWSER || 'chromium',
+    authFile: 'playwright/.auth/user.json',
 }
 
 export const UserDetails = {

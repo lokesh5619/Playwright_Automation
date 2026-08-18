@@ -1,0 +1,4 @@
+Total open tabs: 3
+Tab 1: https://www.google.com/?zx=1786688621556
+Tab 2: https://github.com/
+Tab 3: https://www.wikipedia.org/

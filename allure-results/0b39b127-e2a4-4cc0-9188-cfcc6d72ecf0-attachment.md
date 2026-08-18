@@ -1,0 +1,338 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Demo\POPUP\FileDown.spec.ts >> handle file download
+- Location: tests\Demo\POPUP\FileDown.spec.ts:3:5
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - link "Fork me on GitHub":
+      - /url: https://github.com/tourdedave/the-internet
+      - img "Fork me on GitHub" [ref=e5] [cursor=pointer]
+    - generic [ref=e7]:
+      - heading "File Downloader" [level=3] [ref=e8]
+      - link "tmpw7kggbya.txt" [ref=e9] [cursor=pointer]:
+        - /url: download/tmpw7kggbya.txt
+      - link "r2_test_upload_okofqqby.txt" [ref=e10] [cursor=pointer]:
+        - /url: download/r2_test_upload_okofqqby.txt
+      - link "package.json" [ref=e11] [cursor=pointer]:
+        - /url: download/package.json
+      - link "hello.txt" [ref=e12] [cursor=pointer]:
+        - /url: download/hello.txt
+      - link "aa6304be-5492-4ce3-ba40-2200d4e32a28.txt" [ref=e13] [cursor=pointer]:
+        - /url: download/aa6304be-5492-4ce3-ba40-2200d4e32a28.txt
+      - link "r2_test_upload_8d2p5ph4.txt" [ref=e14] [cursor=pointer]:
+        - /url: download/r2_test_upload_8d2p5ph4.txt
+      - link "sample.txt" [ref=e15] [cursor=pointer]:
+        - /url: download/sample.txt
+      - link "selenium-snapshot.png" [ref=e16] [cursor=pointer]:
+        - /url: download/selenium-snapshot.png
+      - link "PW InterView Questions & Answers.docx" [ref=e17] [cursor=pointer]:
+        - /url: download/PW InterView Questions & Answers.docx
+      - link "Selected photo (10).jpg" [ref=e18] [cursor=pointer]:
+        - /url: download/Selected photo (10).jpg
+      - link "Selenium_100_MCQs.pdf" [ref=e19] [cursor=pointer]:
+        - /url: download/Selenium_100_MCQs.pdf
+      - link "testing_firefox.pdf" [ref=e20] [cursor=pointer]:
+        - /url: download/testing_firefox.pdf
+      - link "r2_test_upload_ylubqpyk.txt" [ref=e21] [cursor=pointer]:
+        - /url: download/r2_test_upload_ylubqpyk.txt
+      - link "r2_test_upload_bsqqyu00.txt" [ref=e22] [cursor=pointer]:
+        - /url: download/r2_test_upload_bsqqyu00.txt
+      - link "test-upload.txt" [ref=e23] [cursor=pointer]:
+        - /url: download/test-upload.txt
+      - link "r2_test_upload_xgffncmq.txt" [ref=e24] [cursor=pointer]:
+        - /url: download/r2_test_upload_xgffncmq.txt
+      - link "Vetri Testing_Resume.pdf" [ref=e25] [cursor=pointer]:
+        - /url: download/Vetri Testing_Resume.pdf
+      - link "5f7c2e02-6cf5-49d7-9744-f2edbd373bbd.txt" [ref=e26] [cursor=pointer]:
+        - /url: download/5f7c2e02-6cf5-49d7-9744-f2edbd373bbd.txt
+      - link "Images.txt" [ref=e27] [cursor=pointer]:
+        - /url: download/Images.txt
+      - link "Screenshot 2023-12-27 133459.png" [ref=e28] [cursor=pointer]:
+        - /url: download/Screenshot 2023-12-27 133459.png
+      - link "pavi_resume.pdf" [ref=e29] [cursor=pointer]:
+        - /url: download/pavi_resume.pdf
+      - link "hello.json" [ref=e30] [cursor=pointer]:
+        - /url: download/hello.json
+      - link "resume.docx" [ref=e31] [cursor=pointer]:
+        - /url: download/resume.docx
+      - link "some-file.txt" [ref=e32] [cursor=pointer]:
+        - /url: download/some-file.txt
+      - link "endpoint.yaml" [ref=e33] [cursor=pointer]:
+        - /url: download/endpoint.yaml
+      - link "testfile.txt" [ref=e34] [cursor=pointer]:
+        - /url: download/testfile.txt
+      - link "8a4b4f67-1d5a-4c3b-8c86-3827801034b6.txt" [ref=e35] [cursor=pointer]:
+        - /url: download/8a4b4f67-1d5a-4c3b-8c86-3827801034b6.txt
+      - link "webdriverIO.png" [ref=e36] [cursor=pointer]:
+        - /url: download/webdriverIO.png
+      - link "004d9443-f671-413b-aff7-74a7470504d4.txt" [ref=e37] [cursor=pointer]:
+        - /url: download/004d9443-f671-413b-aff7-74a7470504d4.txt
+      - link "tmphbvv7muf.txt" [ref=e38] [cursor=pointer]:
+        - /url: download/tmphbvv7muf.txt
+      - link "DhanushKumar (1).pdf" [ref=e39] [cursor=pointer]:
+        - /url: download/DhanushKumar (1).pdf
+      - link "mean median mode.pdf" [ref=e40] [cursor=pointer]:
+        - /url: download/mean median mode.pdf
+      - link "testUpload.json" [ref=e41] [cursor=pointer]:
+        - /url: download/testUpload.json
+      - link "Emptyfolder.zip" [ref=e42] [cursor=pointer]:
+        - /url: download/Emptyfolder.zip
+      - link "image.jpg" [ref=e43] [cursor=pointer]:
+        - /url: download/image.jpg
+      - link "login-success.png" [ref=e44] [cursor=pointer]:
+        - /url: download/login-success.png
+      - link "Image.PNG" [ref=e45] [cursor=pointer]:
+        - /url: download/Image.PNG
+      - link "Nareen karthi resume.pdf" [ref=e46] [cursor=pointer]:
+        - /url: download/Nareen karthi resume.pdf
+      - link "test_upload.txt" [ref=e47] [cursor=pointer]:
+        - /url: download/test_upload.txt
+      - link "testing.mp3" [ref=e48] [cursor=pointer]:
+        - /url: download/testing.mp3
+      - link "sample1.png" [ref=e49] [cursor=pointer]:
+        - /url: download/sample1.png
+      - link "upload-16041628001663134693.txt" [ref=e50] [cursor=pointer]:
+        - /url: download/upload-16041628001663134693.txt
+      - link "Jothirupan_D_Resume_ATS (3.1).pdf.pdf" [ref=e51] [cursor=pointer]:
+        - /url: download/Jothirupan_D_Resume_ATS (3.1).pdf.pdf
+      - link "tmpcd4pgwc5.txt" [ref=e52] [cursor=pointer]:
+        - /url: download/tmpcd4pgwc5.txt
+      - link "r2_test_upload_ly0ehlf3.txt" [ref=e53] [cursor=pointer]:
+        - /url: download/r2_test_upload_ly0ehlf3.txt
+      - link "20260805test.txt" [ref=e54] [cursor=pointer]:
+        - /url: download/20260805test.txt
+      - link "r2_test_upload_5_uuaq5e.txt" [ref=e55] [cursor=pointer]:
+        - /url: download/r2_test_upload_5_uuaq5e.txt
+      - link "swag-labs-order-2026-08-10_09-44-04.pdf" [ref=e56] [cursor=pointer]:
+        - /url: download/swag-labs-order-2026-08-10_09-44-04.pdf
+      - link "Test.png" [ref=e57] [cursor=pointer]:
+        - /url: download/Test.png
+      - link "tmp_5u80wdn.txt" [ref=e58] [cursor=pointer]:
+        - /url: download/tmp_5u80wdn.txt
+      - link "猫.jpg" [ref=e59] [cursor=pointer]:
+        - /url: download/猫.jpg
+      - link "Test Document 1.docx" [ref=e60] [cursor=pointer]:
+        - /url: download/Test Document 1.docx
+      - link "creditClass.pdf" [ref=e61] [cursor=pointer]:
+        - /url: download/creditClass.pdf
+      - link "hi.txt" [ref=e62] [cursor=pointer]:
+        - /url: download/hi.txt
+      - link "r2_test_upload_547f0115.txt" [ref=e63] [cursor=pointer]:
+        - /url: download/r2_test_upload_547f0115.txt
+      - link "r2_test_upload_ox2cn0ye.txt" [ref=e64] [cursor=pointer]:
+        - /url: download/r2_test_upload_ox2cn0ye.txt
+      - link "footword.docx" [ref=e65] [cursor=pointer]:
+        - /url: download/footword.docx
+      - link "kaneqafile.txt" [ref=e66] [cursor=pointer]:
+        - /url: download/kaneqafile.txt
+      - link "Mahalakshmi_Resume.pdf" [ref=e67] [cursor=pointer]:
+        - /url: download/Mahalakshmi_Resume.pdf
+      - link "upload-4928767185401283880.txt" [ref=e68] [cursor=pointer]:
+        - /url: download/upload-4928767185401283880.txt
+      - link "Selenium Notes by Nikhil Sir.pdf" [ref=e69] [cursor=pointer]:
+        - /url: download/Selenium Notes by Nikhil Sir.pdf
+      - link "test 1.txt" [ref=e70] [cursor=pointer]:
+        - /url: download/test 1.txt
+      - link "sample-upload.txt" [ref=e71] [cursor=pointer]:
+        - /url: download/sample-upload.txt
+      - link "tmp5grly4n0.txt" [ref=e72] [cursor=pointer]:
+        - /url: download/tmp5grly4n0.txt
+      - link "0 th Review.pptx" [ref=e73] [cursor=pointer]:
+        - /url: download/0 th Review.pptx
+      - link "KartheeshwaranResume.pdf" [ref=e74] [cursor=pointer]:
+        - /url: download/KartheeshwaranResume.pdf
+      - link "project.pdf" [ref=e75] [cursor=pointer]:
+        - /url: download/project.pdf
+      - link "cruise.jpeg" [ref=e76] [cursor=pointer]:
+        - /url: download/cruise.jpeg
+      - link "LifeKaPlanCSV.csv" [ref=e77] [cursor=pointer]:
+        - /url: download/LifeKaPlanCSV.csv
+      - link "f560e316-00c4-4d20-88c0-ba2edcc68328.txt" [ref=e78] [cursor=pointer]:
+        - /url: download/f560e316-00c4-4d20-88c0-ba2edcc68328.txt
+      - link "r2_test_upload_ioo646ib.txt" [ref=e79] [cursor=pointer]:
+        - /url: download/r2_test_upload_ioo646ib.txt
+      - link "testing.pdf" [ref=e80] [cursor=pointer]:
+        - /url: download/testing.pdf
+      - link "java importantqp.docx" [ref=e81] [cursor=pointer]:
+        - /url: download/java importantqp.docx
+      - link "r2_test_upload_k6jwyarc.txt" [ref=e82] [cursor=pointer]:
+        - /url: download/r2_test_upload_k6jwyarc.txt
+      - link "Engegement Invitation.pdf" [ref=e83] [cursor=pointer]:
+        - /url: download/Engegement Invitation.pdf
+      - link "Nithish Kumar-CV.pdf" [ref=e84] [cursor=pointer]:
+        - /url: download/Nithish Kumar-CV.pdf
+      - link "users.csv" [ref=e85] [cursor=pointer]:
+        - /url: download/users.csv
+      - link "upload-14192753675214127361.txt" [ref=e86] [cursor=pointer]:
+        - /url: download/upload-14192753675214127361.txt
+      - link "Madan_ops.pdf" [ref=e87] [cursor=pointer]:
+        - /url: download/Madan_ops.pdf
+      - link "rf_upload_lme096jt.txt" [ref=e88] [cursor=pointer]:
+        - /url: download/rf_upload_lme096jt.txt
+      - link "tmp59qpdhth.txt" [ref=e89] [cursor=pointer]:
+        - /url: download/tmp59qpdhth.txt
+      - link "puppy.png" [ref=e90] [cursor=pointer]:
+        - /url: download/puppy.png
+      - link "testimg.jpg" [ref=e91] [cursor=pointer]:
+        - /url: download/testimg.jpg
+      - link "random_data_18.txt" [ref=e92] [cursor=pointer]:
+        - /url: download/random_data_18.txt
+      - link "test_upload.pdf" [ref=e93] [cursor=pointer]:
+        - /url: download/test_upload.pdf
+      - link "upload-4413582383948420009.txt" [ref=e94] [cursor=pointer]:
+        - /url: download/upload-4413582383948420009.txt
+      - link "TestUpload.pdf" [ref=e95] [cursor=pointer]:
+        - /url: download/TestUpload.pdf
+      - link "test.pdf" [ref=e96] [cursor=pointer]:
+        - /url: download/test.pdf
+      - link "gauntlet.txt" [ref=e97] [cursor=pointer]:
+        - /url: download/gauntlet.txt
+      - link "Sample img5.jpg" [ref=e98] [cursor=pointer]:
+        - /url: download/Sample img5.jpg
+      - link "testing_edge.pdf" [ref=e99] [cursor=pointer]:
+        - /url: download/testing_edge.pdf
+      - link "Vairamuthupandi S Resume 2.pdf" [ref=e100] [cursor=pointer]:
+        - /url: download/Vairamuthupandi S Resume 2.pdf
+      - link "ChatGPT Image Aug 7, 2026, 11_20_15 AM.png" [ref=e101] [cursor=pointer]:
+        - /url: download/ChatGPT Image Aug 7, 2026, 11_20_15 AM.png
+      - link "art_6610d1d558fb4c02a9c26e7b201806a5.bin" [ref=e102] [cursor=pointer]:
+        - /url: download/art_6610d1d558fb4c02a9c26e7b201806a5.bin
+      - link "Lakshmanan_S_QA_Test_Engineer_Resume.pdf" [ref=e103] [cursor=pointer]:
+        - /url: download/Lakshmanan_S_QA_Test_Engineer_Resume.pdf
+      - link "Dhanush_K.pdf" [ref=e104] [cursor=pointer]:
+        - /url: download/Dhanush_K.pdf
+      - link "Saranarayanan_R_ATS_Resume (3).pdf" [ref=e105] [cursor=pointer]:
+        - /url: download/Saranarayanan_R_ATS_Resume (3).pdf
+      - link "Rashidha Begum.pdf" [ref=e106] [cursor=pointer]:
+        - /url: download/Rashidha Begum.pdf
+      - link "savi.jpg" [ref=e107] [cursor=pointer]:
+        - /url: download/savi.jpg
+      - link "HEALTH AND YOGA - UNIT 5 (1).docx" [ref=e108] [cursor=pointer]:
+        - /url: download/HEALTH AND YOGA - UNIT 5 (1).docx
+      - link "ab4b41de-647a-4d47-9c12-de2f4c9d5c46.txt" [ref=e109] [cursor=pointer]:
+        - /url: download/ab4b41de-647a-4d47-9c12-de2f4c9d5c46.txt
+      - link "random_data.txt" [ref=e110] [cursor=pointer]:
+        - /url: download/random_data.txt
+      - link "sample_upload.png" [ref=e111] [cursor=pointer]:
+        - /url: download/sample_upload.png
+      - link "7403748c-c252-4099-9aa1-3c9979089f26.txt" [ref=e112] [cursor=pointer]:
+        - /url: download/7403748c-c252-4099-9aa1-3c9979089f26.txt
+      - link "upload-test.txt" [ref=e113] [cursor=pointer]:
+        - /url: download/upload-test.txt
+      - link "sample_media_file.png" [ref=e114] [cursor=pointer]:
+        - /url: download/sample_media_file.png
+      - link "tmpxqp5q7ur.txt" [ref=e115] [cursor=pointer]:
+        - /url: download/tmpxqp5q7ur.txt
+      - link "rf_upload_prmz400s.txt" [ref=e116] [cursor=pointer]:
+        - /url: download/rf_upload_prmz400s.txt
+      - link "pdf-1mb.pdf" [ref=e117] [cursor=pointer]:
+        - /url: download/pdf-1mb.pdf
+      - link "r2_test_upload_x13vjqg0.txt" [ref=e118] [cursor=pointer]:
+        - /url: download/r2_test_upload_x13vjqg0.txt
+      - link "taashvik.txt" [ref=e119] [cursor=pointer]:
+        - /url: download/taashvik.txt
+      - link "ホーム画面.jpg" [ref=e120] [cursor=pointer]:
+        - /url: download/ホーム画面.jpg
+      - link "57377969-a35d-455e-8328-c09d992bdac4.txt" [ref=e121] [cursor=pointer]:
+        - /url: download/57377969-a35d-455e-8328-c09d992bdac4.txt
+      - link "Sample img7.jpg" [ref=e122] [cursor=pointer]:
+        - /url: download/Sample img7.jpg
+      - link "test pdf.pdf" [ref=e123] [cursor=pointer]:
+        - /url: download/test pdf.pdf
+      - link "tmpld8_d11a.txt" [ref=e124] [cursor=pointer]:
+        - /url: download/tmpld8_d11a.txt
+      - link "Fee Receipt.pdf" [ref=e125] [cursor=pointer]:
+        - /url: download/Fee Receipt.pdf
+      - link "Excel.xlsx" [ref=e126] [cursor=pointer]:
+        - /url: download/Excel.xlsx
+      - link "rf_upload_pe_d2_f6.txt" [ref=e127] [cursor=pointer]:
+        - /url: download/rf_upload_pe_d2_f6.txt
+      - link "Anuprema.A_Resume.pdf" [ref=e128] [cursor=pointer]:
+        - /url: download/Anuprema.A_Resume.pdf
+      - link "FileUploadTesting.docx" [ref=e129] [cursor=pointer]:
+        - /url: download/FileUploadTesting.docx
+      - link "Documents - Shortcut.lnk" [ref=e130] [cursor=pointer]:
+        - /url: download/Documents - Shortcut.lnk
+      - link "car.jfif" [ref=e131] [cursor=pointer]:
+        - /url: download/car.jfif
+      - link "cat-in-house.jpg" [ref=e132] [cursor=pointer]:
+        - /url: download/cat-in-house.jpg
+      - link "mon_fichier.txt" [ref=e133] [cursor=pointer]:
+        - /url: download/mon_fichier.txt
+      - link "test_upload_file.txt" [ref=e134] [cursor=pointer]:
+        - /url: download/test_upload_file.txt
+      - link "297c3d30-d30f-44ad-b1ad-5f75af742ec8.txt" [ref=e135] [cursor=pointer]:
+        - /url: download/297c3d30-d30f-44ad-b1ad-5f75af742ec8.txt
+      - link "art_274db850ccf34cbf81e62f366f168cad.bin" [ref=e136] [cursor=pointer]:
+        - /url: download/art_274db850ccf34cbf81e62f366f168cad.bin
+      - link "3bf8ddda-a793-4e6a-ba98-d0decb16f662.txt" [ref=e137] [cursor=pointer]:
+        - /url: download/3bf8ddda-a793-4e6a-ba98-d0decb16f662.txt
+      - link "upload-14824974141630117527.txt" [ref=e138] [cursor=pointer]:
+        - /url: download/upload-14824974141630117527.txt
+      - link "Assignment 1 Session 1 – National Insurance Calculations.pdf" [ref=e139] [cursor=pointer]:
+        - /url: download/Assignment 1 Session 1 – National Insurance Calculations.pdf
+      - link "Collection M12.pdf" [ref=e140] [cursor=pointer]:
+        - /url: download/Collection M12.pdf
+      - link "upload-14452494885570920735.txt" [ref=e141] [cursor=pointer]:
+        - /url: download/upload-14452494885570920735.txt
+      - link "8888.json" [ref=e142] [cursor=pointer]:
+        - /url: download/8888.json
+      - link "tmpyj1pz3o9.txt" [ref=e143] [cursor=pointer]:
+        - /url: download/tmpyj1pz3o9.txt
+      - link "e-Nomination.pdf" [ref=e144] [cursor=pointer]:
+        - /url: download/e-Nomination.pdf
+      - link "Expense_Tracker_Project.xlsx" [ref=e145] [cursor=pointer]:
+        - /url: download/Expense_Tracker_Project.xlsx
+      - link "TextDoc.txt" [ref=e146] [cursor=pointer]:
+        - /url: download/TextDoc.txt
+      - link "sampleFile.txt" [ref=e147] [cursor=pointer]:
+        - /url: download/sampleFile.txt
+      - link "upload_sample.txt" [ref=e148] [cursor=pointer]:
+        - /url: download/upload_sample.txt
+      - link "tmporaxiez9.txt" [ref=e149] [cursor=pointer]:
+        - /url: download/tmporaxiez9.txt
+      - link "TestData.xlsx" [ref=e150] [cursor=pointer]:
+        - /url: download/TestData.xlsx
+      - link "cmr.pdf" [ref=e151] [cursor=pointer]:
+        - /url: download/cmr.pdf
+      - link "tmpzq0ac550.txt" [ref=e152] [cursor=pointer]:
+        - /url: download/tmpzq0ac550.txt
+      - link "Project PPT.ppt" [ref=e153] [cursor=pointer]:
+        - /url: download/Project PPT.ppt
+      - link "7d2c5299e08a3426d5a9d62cfd8d285a1c7cb0d7 Build report.pdf" [ref=e154] [cursor=pointer]:
+        - /url: download/7d2c5299e08a3426d5a9d62cfd8d285a1c7cb0d7 Build report.pdf
+      - link "MUGESHWARAN resume.pdf" [ref=e155] [cursor=pointer]:
+        - /url: download/MUGESHWARAN resume.pdf
+      - link "renupic (1).jpg" [ref=e156] [cursor=pointer]:
+        - /url: download/renupic (1).jpg
+      - link "sample.png" [ref=e157] [cursor=pointer]:
+        - /url: download/sample.png
+      - link "COLLEGE BONO CERTIFICATE.pdf" [ref=e158] [cursor=pointer]:
+        - /url: download/COLLEGE BONO CERTIFICATE.pdf
+      - link "test.txt" [ref=e159] [cursor=pointer]:
+        - /url: download/test.txt
+      - link "tmp02h_muk_.txt" [ref=e160] [cursor=pointer]:
+        - /url: download/tmp02h_muk_.txt
+  - generic [ref=e162]:
+    - separator [ref=e163]
+    - generic [ref=e164]:
+      - text: Powered by
+      - link "Elemental Selenium" [ref=e165] [cursor=pointer]:
+        - /url: http://elementalselenium.com/
+```

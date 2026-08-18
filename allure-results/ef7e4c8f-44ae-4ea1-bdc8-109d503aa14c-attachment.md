@@ -1,0 +1,1168 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Demo\NewTabExample2.spec.ts >> handle new tab opened by clicking a link
+- Location: tests\Demo\NewTabExample2.spec.ts:3:5
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded.
+```
+
+```
+Error: browserContext.waitForEvent: Test timeout of 60000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Jump to content" [ref=e2] [cursor=pointer]:
+    - /url: "#bodyContent"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - navigation "Site" [ref=e6]:
+        - generic "Main menu" [ref=e7]:
+          - button "Main menu" [ref=e8] [cursor=pointer]
+          - generic [ref=e11]: Main menu
+      - link "Wikipedia The Free Encyclopedia" [ref=e12] [cursor=pointer]:
+        - /url: /wiki/Main_Page
+        - generic [ref=e13]:
+          - img "Wikipedia" [ref=e14]
+          - img "The Free Encyclopedia" [ref=e15]
+    - generic [ref=e16]:
+      - search [ref=e17]:
+        - generic [ref=e20]:
+          - searchbox "Search Wikipedia" [ref=e23]
+          - button "Search" [ref=e25]
+      - navigation "Personal tools" [ref=e26]:
+        - list [ref=e30]:
+          - listitem [ref=e31]:
+            - link "Donate" [ref=e32] [cursor=pointer]:
+              - /url: https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=en.wikipedia.org&uselang=en
+          - listitem [ref=e33]:
+            - link "Create account" [ref=e34] [cursor=pointer]:
+              - /url: https://en.wikipedia.org/w/index.php?title=Special%3ACreateAccount&returnto=Main+Page&experiments%5B0%5D=we-1-8-account-creation-no-desktop-benefits%3Aunsampled
+          - listitem [ref=e35]:
+            - link "Log in" [ref=e36] [cursor=pointer]:
+              - /url: https://en.wikipedia.org/w/index.php?title=Special%3AUserLogin&returnto=Main+Page&experiments%5B0%5D=we-1-8-account-creation-no-desktop-benefits%3Aunsampled
+  - generic [ref=e38]:
+    - main [ref=e42]:
+      - generic [ref=e44]:
+        - navigation "Namespaces" [ref=e46]:
+          - list [ref=e49]:
+            - listitem [ref=e50]:
+              - link "Main Page" [ref=e51] [cursor=pointer]:
+                - /url: /wiki/Main_Page
+                - generic [ref=e52]: Main Page
+            - listitem [ref=e53]:
+              - link "Talk" [ref=e54] [cursor=pointer]:
+                - /url: /wiki/Talk:Main_Page
+                - generic [ref=e55]: Talk
+        - generic [ref=e56]:
+          - navigation "Views" [ref=e57]:
+            - list [ref=e60]:
+              - listitem [ref=e61]:
+                - link "Read" [ref=e62] [cursor=pointer]:
+                  - /url: /wiki/Main_Page
+                  - generic [ref=e63]: Read
+              - listitem [ref=e64]:
+                - link "View source" [ref=e65] [cursor=pointer]:
+                  - /url: /w/index.php?title=Main_Page&action=edit
+                  - generic [ref=e66]: View source
+              - listitem [ref=e67]:
+                - link "View history" [ref=e68] [cursor=pointer]:
+                  - /url: /w/index.php?title=Main_Page&action=history
+                  - generic [ref=e69]: View history
+          - navigation "Page tools" [ref=e70]:
+            - generic [ref=e71]:
+              - button "Tools" [ref=e72] [cursor=pointer]
+              - generic [ref=e75]: Tools
+      - navigation "Appearance" [ref=e78]:
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - generic [ref=e82]: Appearance
+            - button "Hide Appearance" [ref=e83] [cursor=pointer]: hide
+          - generic [ref=e84]:
+            - generic [ref=e85]: Text
+            - list [ref=e87]:
+              - listitem [ref=e88]:
+                - generic [ref=e90]:
+                  - generic [ref=e91]:
+                    - radio "Small" [ref=e92]
+                    - generic [ref=e95]: Small
+                  - generic [ref=e96]:
+                    - radio "Standard" [checked] [ref=e97]
+                    - generic [ref=e100]: Standard
+                  - generic [ref=e101]:
+                    - radio "Large" [ref=e102]
+                    - generic [ref=e105]: Large
+          - generic [ref=e106]:
+            - generic [ref=e107]: Width
+            - list [ref=e109]:
+              - listitem [ref=e110]:
+                - generic [ref=e112]:
+                  - generic [ref=e113]:
+                    - radio "Standard" [checked] [ref=e114]
+                    - generic [ref=e117]: Standard
+                  - generic [ref=e118]:
+                    - radio "Wide" [ref=e119]
+                    - generic [ref=e122]: Wide
+          - generic [ref=e123]:
+            - generic [ref=e124]: Color
+            - list [ref=e126]:
+              - listitem [ref=e127]:
+                - generic [ref=e129]:
+                  - generic [ref=e130]:
+                    - radio "Automatic" [ref=e131]
+                    - generic [ref=e134]: Automatic
+                  - generic [ref=e135]:
+                    - radio "Light" [checked] [ref=e136]
+                    - generic [ref=e139]: Light
+                  - generic [ref=e140]:
+                    - radio "Dark" [ref=e141]
+                    - generic [ref=e144]: Dark
+      - generic "Main Page" [ref=e145]:
+        - generic [ref=e148]:
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - heading "Welcome to Wikipedia" [level=1] [ref=e152]:
+                - text: Welcome to
+                - link "Wikipedia" [ref=e153] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia
+              - text: ","
+            - generic [ref=e154]:
+              - text: the
+              - link "free" [ref=e155] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Free_content
+              - text: encyclopedia that
+              - link "anyone can edit" [ref=e156] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Help:Introduction_to_Wikipedia
+              - text: .
+            - list [ref=e158]:
+              - listitem [ref=e159]:
+                - link "251,749" [ref=e160] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Special:Statistics
+                - text: active editors ·
+              - listitem [ref=e161]:
+                - link "7,224,484" [ref=e162] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Special:Statistics
+                - text: articles in
+                - link "English" [ref=e163] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/English_language
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - heading "From today's featured article" [level=2] [ref=e166]
+              - generic [ref=e167]:
+                - link "European rabbit" [ref=e171] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Oryctolagus_cuniculus_-_euqirneto_-_419737670_(cropped).jpeg
+                  - img "European rabbit" [ref=e172]
+                - paragraph [ref=e173]:
+                  - text: The
+                  - link "European rabbit" [ref=e175] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/European_rabbit
+                  - text: (Oryctolagus cuniculus) is a species of rabbit native to the Iberian Peninsula and southwestern France. It is the sole living member of the genus Oryctolagus and has two subspecies. The European rabbit eats plants and lives in grasslands, and is highly adaptable to different environments, making its distinctive
+                  - link "burrows" [ref=e176] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Burrow
+                  - text: known as
+                  - link "warrens" [ref=e177] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Warren_(burrow)
+                  - text: to live underground. It is the only species of rabbit to be
+                  - link "domesticated" [ref=e178] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Domestication
+                  - text: ", and"
+                  - link "the many breeds of European rabbit" [ref=e179] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/List_of_rabbit_breeds
+                  - text: vary widely in size and shape, though the typical European rabbit has brown, grey or black fur with white undersides and is smaller than a
+                  - link "European hare" [ref=e180] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/European_hare
+                  - text: or
+                  - link "mountain hare" [ref=e181] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Mountain_hare
+                  - text: . In the European rabbit's
+                  - link "mating system" [ref=e182] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Mating_system
+                  - text: ", dominant males have multiple female mates, though"
+                  - link "monogamous" [ref=e183] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Monogamy_in_animals
+                  - text: relationships are common in groups with fewer females. European rabbits have been
+                  - link "introduced" [ref=e184] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Introduced_species
+                  - text: to every continent except for Antarctica, but are facing population declines in their native range due to overhunting,
+                  - link "habitat destruction" [ref=e185] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Habitat_destruction
+                  - text: ", and disease."
+                  - generic [ref=e186]:
+                    - text: (
+                    - link "Full article..." [ref=e188] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/European_rabbit
+                    - text: )
+                - generic [ref=e189]:
+                  - text: "Recently featured:"
+                  - list [ref=e191]:
+                    - listitem [ref=e192]:
+                      - link "Ellis Wackett" [ref=e193] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Ellis_Wackett
+                      - text: ·
+                    - listitem [ref=e194]:
+                      - link "Yongle Emperor" [ref=e195] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Yongle_Emperor
+                      - text: ·
+                    - listitem [ref=e196]:
+                      - link "Grey-cowled wood rail" [ref=e197] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Grey-cowled_wood_rail
+                - list [ref=e199]:
+                  - listitem [ref=e200]:
+                    - link "Archive" [ref=e202] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Wikipedia:Today's_featured_article/August_2026
+                    - text: ·
+                  - listitem [ref=e203]:
+                    - link "By email" [ref=e205] [cursor=pointer]:
+                      - /url: https://lists.wikimedia.org/postorius/lists/daily-article-l.lists.wikimedia.org/
+                    - text: ·
+                  - listitem [ref=e206]:
+                    - link "More featured articles" [ref=e208] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Wikipedia:Featured_articles_(linked_from_TFAfooter)
+                    - text: ·
+                  - listitem [ref=e209]:
+                    - link "About" [ref=e211] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Wikipedia:About_Today's_featured_article
+              - heading "Did you know ..." [level=2] [ref=e212]
+              - generic [ref=e213]:
+                - generic [ref=e215]:
+                  - link "Agus Djaya" [ref=e217] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Agoes_Djajasoentara_(Agus_Djaja),_Djawa_Baroe,_Vol._1,_Iss._9_(1943-05-01),_p16.jpg
+                    - img "Agus Djaya" [ref=e218]
+                  - generic [ref=e219]: Agus Djaya
+                - list [ref=e220]:
+                  - listitem [ref=e221]:
+                    - text: ... that Indonesian painter
+                    - link "Agus Djaya" [ref=e223] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Agus_Djaya
+                    - text: (pictured) exhibited throughout Europe during the National Revolution?
+                  - listitem [ref=e224]:
+                    - text: ... that the anime film
+                    - link "100 Meters" [ref=e227] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/100_Meters_(manga)
+                    - text: has a 3-minute 40-second
+                    - link "long-take" [ref=e228] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Long_take
+                    - text: scene that includes 9800
+                    - link "rotoscoped" [ref=e229] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Rotoscoping
+                    - text: frames and took a year to produce?
+                  - listitem [ref=e230]:
+                    - text: ... that
+                    - link "Junius Wilson" [ref=e232] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Junius_Wilson
+                    - text: was a deaf American who spent almost 70 years as a patient in a mental hospital despite not being mentally ill?
+                  - listitem [ref=e233]:
+                    - text: ... that the quarries in
+                    - link "Aris, Namibia" [ref=e235] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Aris,_Namibia
+                    - text: ", contain at least three minerals found nowhere else on Earth?"
+                  - listitem [ref=e236]:
+                    - text: ... that Filipino rock singer
+                    - link "Gian Bernardino" [ref=e238] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Gian_Bernardino
+                    - text: sometimes wears
+                    - link "androgynous" [ref=e239] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Androgyny
+                    - text: outfits while performing onstage?
+                  - listitem [ref=e240]:
+                    - text: ... that the village of
+                    - link "Gangfang" [ref=e242] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Gangfang
+                    - text: was ceded from Burma to China in 1960 after a 50-year dispute?
+                  - listitem [ref=e243]:
+                    - text: ... that creative director Al Hope had ideas for
+                    - 'link "Alien: Isolation 2" [ref=e246] [cursor=pointer]':
+                      - /url: https://en.wikipedia.org/wiki/Alien:_Isolation_2
+                    - text: before the original
+                    - 'link "Alien: Isolation" [ref=e248] [cursor=pointer]':
+                      - /url: https://en.wikipedia.org/wiki/Alien:_Isolation
+                    - text: had been finished?
+                  - listitem [ref=e249]:
+                    - text: ... that the
+                    - link "Dutch East India Company" [ref=e250] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Dutch_East_India_Company
+                    - text: "'s participation in a"
+                    - link "Johor" [ref=e251] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Johor_Sultanate
+                    - text: conflict triggered
+                    - link "a siege of Dutch Malacca" [ref=e253] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Siege_of_Malacca_(1756–1757)
+                    - text: "?"
+                  - listitem [ref=e254]:
+                    - text: ... that scholars debate whether
+                    - link "A Tale of Two Nations" [ref=e257] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/A_Tale_of_Two_Nations
+                    - text: was not at all, mildly, or distinctly antisemitic?
+                - list [ref=e259]:
+                  - listitem [ref=e260]:
+                    - link "Archive" [ref=e262] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Wikipedia:Did_you_know_archive
+                    - text: ·
+                  - listitem [ref=e263]:
+                    - link "Start a new article" [ref=e265] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Help:Your_first_article
+                    - text: ·
+                  - listitem [ref=e266]:
+                    - link "Nominate an article" [ref=e268] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Template_talk:Did_you_know
+            - generic [ref=e269]:
+              - heading "In the news" [level=2] [ref=e270]
+              - generic [ref=e271]:
+                - figure [ref=e272]:
+                  - generic [ref=e273]:
+                    - link "Earthquake damage in Pereira" [ref=e275] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/File:Pereira_after_the_earthquake_-_WCK_(cropped).jpg
+                      - img "Earthquake damage in Pereira" [ref=e276]
+                    - generic [ref=e277]:
+                      - text: Earthquake damage in
+                      - link "Pereira" [ref=e278] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Pereira,_Colombia
+                - list [ref=e279]:
+                  - listitem [ref=e280]:
+                    - link "A solar eclipse" [ref=e282] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Solar_eclipse_of_August_12,_2026
+                    - text: causes
+                    - link "totality" [ref=e283] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Solar_eclipse#Eclipse_phases
+                    - text: from Siberia to Iberia.
+                  - listitem [ref=e284]:
+                    - link "A magnitude 7.4 earthquake" [ref=e286] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/2026_Colombia_earthquake
+                    - text: (damage pictured) strikes
+                    - link "Chocó Department" [ref=e287] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Chocó_Department
+                    - text: ", Colombia, leaving at least 254 people dead."
+                  - listitem [ref=e288]:
+                    - text: In cycling,
+                    - link "Demi Vollering" [ref=e289] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Demi_Vollering
+                    - text: wins
+                    - link "the Tour de France Femmes" [ref=e291] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/2026_Tour_de_France_Femmes
+                    - text: .
+                  - listitem [ref=e292]:
+                    - link "Shootings" [ref=e294] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/2026_Nonthaburi_shootings
+                    - text: at a residence and a school in
+                    - link "Nonthaburi province" [ref=e295] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Nonthaburi_province
+                    - text: ", Thailand, leave at least nine people dead."
+                - generic [ref=e296]:
+                  - generic [ref=e297]:
+                    - text: "Ongoing:"
+                    - list [ref=e299]:
+                      - listitem [ref=e300]:
+                        - link "Iran war" [ref=e301] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/2026_Iran_war
+                        - text: (
+                        - link "Lebanon war" [ref=e302] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/2026_Lebanon_war
+                        - text: ) ·
+                      - listitem [ref=e303]:
+                        - link "Russo-Ukrainian war" [ref=e304] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Russo-Ukrainian_war_(2022–present)
+                        - list [ref=e305]:
+                          - listitem [ref=e306]:
+                            - text: (
+                            - link "timeline" [ref=e307] [cursor=pointer]:
+                              - /url: https://en.wikipedia.org/wiki/Timeline_of_the_Russo-Ukrainian_war_(1_June_2026_–_present)
+                            - text: )
+                  - generic [ref=e308]:
+                    - link "Recent deaths" [ref=e310] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Deaths_in_2026
+                    - text: ":"
+                    - list [ref=e312]:
+                      - listitem [ref=e313]:
+                        - link "Xaysomphone Phomvihane" [ref=e314] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Xaysomphone_Phomvihane
+                        - text: ·
+                      - listitem [ref=e315]:
+                        - link "Jackie" [ref=e316] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Jackie_and_Shadow
+                        - text: ·
+                      - listitem [ref=e317]:
+                        - link "William Orbit" [ref=e318] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/William_Orbit
+                        - text: ·
+                      - listitem [ref=e319]:
+                        - link "Zoltán Melis" [ref=e320] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Zoltán_Melis
+                        - text: ·
+                      - listitem [ref=e321]:
+                        - link "Philip Ruppe" [ref=e322] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Philip_Ruppe
+                        - text: ·
+                      - listitem [ref=e323]:
+                        - link "Jimmy Cricket" [ref=e324] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Jimmy_Cricket
+                - list [ref=e326]:
+                  - listitem [ref=e327]:
+                    - link "More current events" [ref=e329] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Portal:Current_events
+                    - text: ·
+                  - listitem [ref=e330]:
+                    - link "Nominate an article" [ref=e332] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Wikipedia:In_the_news/Candidates
+              - heading "On this day" [level=2] [ref=e333]
+              - generic [ref=e334]:
+                - paragraph [ref=e335]:
+                  - link "August 14" [ref=e337] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/August_14
+                  - text: ":"
+                  - link "Arba'in" [ref=e339] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Arba'in
+                  - text: (Shia Islam),
+                  - link "Independence Day" [ref=e341] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Independence_Day_(Pakistan)
+                  - text: in Pakistan (
+                  - link "1947" [ref=e342] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/1947
+                  - text: )
+                - generic [ref=e344]:
+                  - link "Kenji Hatanaka" [ref=e346] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Major_Kenji_Hatanaka.jpg
+                    - img "Kenji Hatanaka" [ref=e347]
+                  - generic [ref=e348]: Kenji Hatanaka
+                - list [ref=e349]:
+                  - listitem [ref=e350]:
+                    - link "1720" [ref=e351] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/1720
+                    - text: – The Spanish
+                    - link "Villasur expedition" [ref=e353] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Villasur_expedition
+                    - text: ", intended to slow the progress of French influence on the"
+                    - link "Great Plains" [ref=e354] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Great_Plains
+                    - text: of North America, ended in failure when it was ambushed by
+                    - link "Pawnee" [ref=e355] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Pawnee_people
+                    - text: and
+                    - link "Otoe" [ref=e356] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Otoe
+                    - text: forces.
+                  - listitem [ref=e357]:
+                    - link "1888" [ref=e358] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/1888
+                    - text: – One of the first recordings of music, of
+                    - link "Arthur Sullivan" [ref=e359] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Arthur_Sullivan
+                    - text: "'s \""
+                    - link "The Lost Chord" [ref=e361] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_Lost_Chord
+                    - text: "\", was played at a press conference in London to introduce"
+                    - link "Thomas Edison" [ref=e362] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Thomas_Edison
+                    - text: "'s"
+                    - link "phonograph" [ref=e363] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Phonograph
+                    - text: .
+                  - listitem [ref=e364]:
+                    - link "1945" [ref=e365] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/1945
+                    - text: –
+                    - link "Kenji Hatanaka" [ref=e366] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Kenji_Hatanaka
+                    - text: (pictured) and other Japanese military officers launched
+                    - link "an attempted coup d'état" [ref=e368] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Kyūjō_incident
+                    - text: to prevent the
+                    - link "surrender of Japan" [ref=e369] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Surrender_of_Japan
+                    - text: .
+                  - listitem [ref=e370]:
+                    - link "2005" [ref=e371] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/2005
+                    - text: –
+                    - link "Helios Airways Flight 522" [ref=e373] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Helios_Airways_Flight_522
+                    - text: crashed into a mountain north of
+                    - link "Marathon" [ref=e374] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Marathon,_Greece
+                    - text: ", Greece, killing all 121 people on board."
+                  - listitem [ref=e375]:
+                    - link "2007" [ref=e376] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/2007
+                    - text: – Four coordinated suicide bomb attacks
+                    - link "detonated in the Yazidi communities" [ref=e378] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Qahtaniyah_bombings
+                    - text: of
+                    - link "Qahtaniya" [ref=e379] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Til_Ezer
+                    - text: and
+                    - link "Jazeera" [ref=e380] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Siba_Sheikh_Khidir
+                    - text: ", Iraq, killing 796 people and wounding 1,562 others."
+                - list [ref=e382]:
+                  - listitem [ref=e383]:
+                    - link "Pieter Coecke van Aelst" [ref=e385] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Pieter_Coecke_van_Aelst
+                    - text: (b. 1502) ·
+                  - listitem [ref=e386]:
+                    - link "Louise Slaughter" [ref=e388] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Louise_Slaughter
+                    - text: (b. 1929) ·
+                  - listitem [ref=e389]:
+                    - link "HueningKai" [ref=e391] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/HueningKai
+                    - text: (b. 2002) ·
+                  - listitem [ref=e392]:
+                    - link "Shammi Kapoor" [ref=e394] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Shammi_Kapoor
+                    - text: (d. 2011)
+                - generic [ref=e395]:
+                  - text: "More anniversaries:"
+                  - list [ref=e397]:
+                    - listitem [ref=e398]:
+                      - link "August 13" [ref=e399] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/August_13
+                      - text: ·
+                    - listitem [ref=e400]:
+                      - link "August 14" [ref=e402] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/August_14
+                      - text: ·
+                    - listitem [ref=e403]:
+                      - link "August 15" [ref=e404] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/August_15
+                - list [ref=e406]:
+                  - listitem [ref=e407]:
+                    - link "Archive" [ref=e409] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Wikipedia:Selected_anniversaries/August
+                    - text: ·
+                  - listitem [ref=e410]:
+                    - link "By email" [ref=e412] [cursor=pointer]:
+                      - /url: https://lists.wikimedia.org/postorius/lists/daily-article-l.lists.wikimedia.org/
+                    - text: ·
+                  - listitem [ref=e413]:
+                    - link "List of days of the year" [ref=e415] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/List_of_days_of_the_year
+                    - text: ·
+                  - listitem [ref=e416]:
+                    - link "About" [ref=e418] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Wikipedia:Selected_anniversaries
+          - generic [ref=e419]:
+            - heading "From today's featured list" [level=2] [ref=e420]
+            - generic [ref=e421]:
+              - generic [ref=e423]:
+                - link "Dustin Martin" [ref=e425] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Dustin_Martin_2017.3.jpg
+                  - img "Dustin Martin" [ref=e426]
+                - generic [ref=e427]: Dustin Martin
+              - paragraph [ref=e428]:
+                - text: The
+                - link "Norm Smith Medal" [ref=e430] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Norm_Smith_Medal
+                - text: is an award in
+                - link "Australian rules football" [ref=e431] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Australian_rules_football
+                - text: presented annually to the player adjudged the
+                - link "best on ground" [ref=e432] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Player_of_the_match#Australian_rules_football
+                - text: in
+                - link "the grand final" [ref=e433] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/AFL_Grand_Final
+                - text: of the
+                - link "Australian Football League" [ref=e434] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Australian_Football_League
+                - text: (AFL). Before 1990, the competition was known as the Victorian Football League (VFL). The award was first presented in the
+                - link "1979 VFL grand final" [ref=e435] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/1979_VFL_grand_final
+                - text: ", and it was won by"
+                - link "Wayne Harmes" [ref=e436] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wayne_Harmes
+                - text: ", playing in"
+                - link "Carlton" [ref=e437] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Carlton_Football_Club
+                - text: "'s premiership victory against"
+                - link "Collingwood" [ref=e438] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Collingwood_Football_Club
+                - text: . The award is named in honour of
+                - link "Norm Smith" [ref=e439] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Norm_Smith
+                - text: ", who won four VFL premierships as a player and six as a coach for the"
+                - link "Melbourne Football Club" [ref=e440] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Melbourne_Football_Club
+                - text: .
+                - link "Dustin Martin" [ref=e441] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Dustin_Martin
+                - text: (pictured) is the only player to have won the Norm Smith Medal three times. The award is usually won by a player on the winning team in the grand final; only four players have received it as a member of the losing team. The Norm Smith Medal was most recently awarded to
+                - link "Brisbane" [ref=e442] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Brisbane_Lions
+                - text: "'s"
+                - link "Will Ashcroft" [ref=e443] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Will_Ashcroft
+                - text: ", after the"
+                - link "2025 AFL Grand Final" [ref=e444] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/2025_AFL_Grand_Final
+                - text: . (
+                - link "Full list..." [ref=e446] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Norm_Smith_Medal
+                - text: )
+              - generic [ref=e447]:
+                - text: "Recently featured:"
+                - list [ref=e449]:
+                  - listitem [ref=e450]:
+                    - link "Battleships of Italy" [ref=e451] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/List_of_battleships_of_Italy
+                    - text: ·
+                  - listitem [ref=e452]:
+                    - link "Clint Eastwood filmography" [ref=e453] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Clint_Eastwood_filmography
+                    - text: ·
+                  - listitem [ref=e454]:
+                    - link "World Heritage Sites in Ecuador" [ref=e455] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/List_of_World_Heritage_Sites_in_Ecuador
+              - list [ref=e457]:
+                - listitem [ref=e458]:
+                  - link "Archive" [ref=e460] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Today's_featured_list/August_2026
+                  - text: ·
+                - listitem [ref=e461]:
+                  - link "More featured lists" [ref=e463] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Featured_lists
+          - generic [ref=e464]:
+            - heading "Today's featured picture" [level=2] [ref=e465]
+            - generic [ref=e466]:
+              - link "Saint Patrick's Cathedral, Karachi" [ref=e468] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:PK_Karachi_asv2020-02_img43_StPatrick_Cathedral.jpg
+                - img "Saint Patrick's Cathedral, Karachi" [ref=e469]
+              - paragraph [ref=e470]:
+                - link "Saint Patrick's Cathedral" [ref=e472] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Saint_Patrick's_Cathedral,_Karachi
+                - text: is the seat of the
+                - link "Roman Catholic Archdiocese of Karachi" [ref=e473] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Roman_Catholic_Archdiocese_of_Karachi
+                - text: ", and is located near the"
+                - link "Empress Market" [ref=e474] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Empress_Market
+                - text: in
+                - link "Saddar" [ref=e475] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Saddar
+                - text: ", a neighbourhood of"
+                - link "Karachi" [ref=e476] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Karachi
+                - text: ", Pakistan. The cathedral was completed in 1881 and can accommodate 1,500 worshippers. It celebrated its centenary in 1978. In December 1998, the interior of the cathedral was partially damaged in a bomb attack that also injured one woman. This photograph of the interior of Saint Patrick's Cathedral, looking towards the high altar, was taken in 2020."
+              - paragraph [ref=e477]:
+                - generic [ref=e478]:
+                  - text: "Photograph credit:"
+                  - link "Alexander Savin" [ref=e479] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/User:A.Savin
+              - generic [ref=e480]:
+                - text: "Recently featured:"
+                - list [ref=e482]:
+                  - listitem [ref=e483]:
+                    - link "Addax" [ref=e484] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Template:POTD/2026-08-13
+                    - text: ·
+                  - listitem [ref=e485]:
+                    - link "Clementine" [ref=e486] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Template:POTD/2026-08-12
+                    - text: ·
+                  - listitem [ref=e487]:
+                    - link "Shiva" [ref=e488] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Template:POTD/2026-08-11
+              - list [ref=e490]:
+                - listitem [ref=e491]:
+                  - link "Archive" [ref=e493] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Picture_of_the_day/Archive
+                  - text: ·
+                - listitem [ref=e494]:
+                  - link "More featured pictures" [ref=e496] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Featured_pictures
+          - generic [ref=e497]:
+            - heading "Other areas of Wikipedia" [level=2] [ref=e498]
+            - list [ref=e500]:
+              - listitem [ref=e501]:
+                - link "Community portal" [ref=e503] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:Community_portal
+                - text: – The central hub for editors, with resources, links, tasks, and announcements.
+              - listitem [ref=e504]:
+                - link "Village pump" [ref=e506] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:Village_pump
+                - text: – Forum for discussions about Wikipedia itself, including policies and technical issues.
+              - listitem [ref=e507]:
+                - link "Site news" [ref=e509] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:News
+                - text: – Sources of news about Wikipedia and the broader Wikimedia movement.
+              - listitem [ref=e510]:
+                - link "Teahouse" [ref=e512] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:Teahouse
+                - text: – Ask basic questions about using or editing Wikipedia.
+              - listitem [ref=e513]:
+                - link "Help desk" [ref=e515] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:Help_desk
+                - text: – Ask questions about using or editing Wikipedia.
+              - listitem [ref=e516]:
+                - link "Reference desk" [ref=e518] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:Reference_desk
+                - text: – Ask research questions about encyclopedic topics.
+              - listitem [ref=e519]:
+                - link "Content portals" [ref=e521] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:Contents/Portals
+                - text: – A unique way to navigate the encyclopedia.
+            - heading "Wikipedia's sister projects" [level=2] [ref=e522]
+            - generic [ref=e523]:
+              - paragraph [ref=e524]:
+                - text: Wikipedia is written by volunteer editors and hosted by the
+                - link "Wikimedia Foundation" [ref=e525] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikimedia_Foundation
+                - text: ", a non-profit organization that also hosts a range of other volunteer"
+                - link "projects" [ref=e526] [cursor=pointer]:
+                  - /url: https://wikimediafoundation.org/what-we-do/wikimedia-projects/
+                - text: ":"
+              - list [ref=e528]:
+                - listitem [ref=e529]:
+                  - link "Wikimedia Commons logo" [ref=e532] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Commons-logo.svg
+                    - img "Wikimedia Commons logo" [ref=e533]
+                  - generic [ref=e534]:
+                    - link "Commons" [ref=e536] [cursor=pointer]:
+                      - /url: https://commons.wikimedia.org/wiki/
+                    - text: Free media repository
+                - listitem [ref=e537]:
+                  - link "MediaWiki logo" [ref=e540] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:MediaWiki-2020-icon.svg
+                    - img "MediaWiki logo" [ref=e541]
+                  - generic [ref=e542]:
+                    - link "MediaWiki" [ref=e544] [cursor=pointer]:
+                      - /url: https://www.mediawiki.org/wiki/
+                    - text: Wiki software development
+                - listitem [ref=e545]:
+                  - generic [ref=e549]:
+                    - link "Meta-Wiki" [ref=e551] [cursor=pointer]:
+                      - /url: https://meta.wikimedia.org/wiki/
+                    - text: Wikimedia project coordination
+                - listitem [ref=e552]:
+                  - link "Wikibooks logo" [ref=e555] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Wikibooks-logo.svg
+                    - img "Wikibooks logo" [ref=e556]
+                  - generic [ref=e557]:
+                    - link "Wikibooks" [ref=e559] [cursor=pointer]:
+                      - /url: https://en.wikibooks.org/wiki/
+                    - text: Free textbooks and manuals
+                - listitem [ref=e560]:
+                  - generic [ref=e564]:
+                    - link "Wikidata" [ref=e566] [cursor=pointer]:
+                      - /url: https://www.wikidata.org/wiki/
+                    - text: Free knowledge base
+                - listitem [ref=e567]:
+                  - link "Wikifunctions logo" [ref=e570] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Wikifunctions-logo.svg
+                    - img "Wikifunctions logo" [ref=e571]
+                  - generic [ref=e572]:
+                    - link "Wikifunctions" [ref=e574] [cursor=pointer]:
+                      - /url: https://www.wikifunctions.org/wiki/
+                    - text: Catalog of computer functions
+                - listitem [ref=e575]:
+                  - generic [ref=e579]:
+                    - link "Wikiquote" [ref=e581] [cursor=pointer]:
+                      - /url: https://en.wikiquote.org/wiki/
+                    - text: Collection of quotations
+                - listitem [ref=e582]:
+                  - link "Wikisource logo" [ref=e585] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Wikisource-logo.svg
+                    - img "Wikisource logo" [ref=e586]
+                  - generic [ref=e587]:
+                    - link "Wikisource" [ref=e589] [cursor=pointer]:
+                      - /url: https://en.wikisource.org/wiki/
+                    - text: Free-content library
+                - listitem [ref=e590]:
+                  - link "Wikispecies logo" [ref=e593] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Wikispecies-logo.svg
+                    - img "Wikispecies logo" [ref=e594]
+                  - generic [ref=e595]:
+                    - link "Wikispecies" [ref=e597] [cursor=pointer]:
+                      - /url: https://species.wikimedia.org/wiki/
+                    - text: Directory of species
+                - listitem [ref=e598]:
+                  - link "Wikiversity logo" [ref=e601] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Wikiversity_logo_2017.svg
+                    - img "Wikiversity logo" [ref=e602]
+                  - generic [ref=e603]:
+                    - link "Wikiversity" [ref=e605] [cursor=pointer]:
+                      - /url: https://en.wikiversity.org/wiki/
+                    - text: Free learning tools
+                - listitem [ref=e606]:
+                  - link "Wikivoyage logo" [ref=e609] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Wikivoyage-Logo-v3-icon.svg
+                    - img "Wikivoyage logo" [ref=e610]
+                  - generic [ref=e611]:
+                    - link "Wikivoyage" [ref=e613] [cursor=pointer]:
+                      - /url: https://en.wikivoyage.org/wiki/
+                    - text: Free travel guide
+                - listitem [ref=e614]:
+                  - link "Wiktionary logo" [ref=e617] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Wiktionary-logo-en-v2.svg
+                    - img "Wiktionary logo" [ref=e618]
+                  - generic [ref=e619]:
+                    - link "Wiktionary" [ref=e621] [cursor=pointer]:
+                      - /url: https://en.wiktionary.org/wiki/
+                    - text: Dictionary and thesaurus
+            - heading "Wikipedia languages" [level=2] [ref=e622]
+            - generic [ref=e624]:
+              - paragraph [ref=e625]:
+                - text: This Wikipedia is written in
+                - link "English" [ref=e626] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/English_language
+                - text: . Many
+                - link "other Wikipedias are available" [ref=e627] [cursor=pointer]:
+                  - /url: https://meta.wikimedia.org/wiki/List%20of%20Wikipedias
+                - text: ; some of the largest are listed below.
+              - list [ref=e628]:
+                - listitem [ref=e629]:
+                  - heading "1,000,000+ articles" [level=3] [ref=e632]
+                  - list [ref=e635]:
+                    - listitem [ref=e636]:
+                      - link "العربية" [ref=e637] [cursor=pointer]:
+                        - /url: https://ar.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e638]:
+                      - link "Deutsch" [ref=e639] [cursor=pointer]:
+                        - /url: https://de.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e640]:
+                      - link "Español" [ref=e641] [cursor=pointer]:
+                        - /url: https://es.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e642]:
+                      - link "فارسی" [ref=e643] [cursor=pointer]:
+                        - /url: https://fa.wikipedia.org/wiki/
+                      - text: ‎ ·
+                    - listitem [ref=e644]:
+                      - link "Français" [ref=e645] [cursor=pointer]:
+                        - /url: https://fr.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e646]:
+                      - link "Italiano" [ref=e647] [cursor=pointer]:
+                        - /url: https://it.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e648]:
+                      - link "Nederlands" [ref=e649] [cursor=pointer]:
+                        - /url: https://nl.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e650]:
+                      - link "日本語" [ref=e651] [cursor=pointer]:
+                        - /url: https://ja.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e652]:
+                      - link "Polski" [ref=e653] [cursor=pointer]:
+                        - /url: https://pl.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e654]:
+                      - link "Português" [ref=e655] [cursor=pointer]:
+                        - /url: https://pt.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e656]:
+                      - link "Русский" [ref=e657] [cursor=pointer]:
+                        - /url: https://ru.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e658]:
+                      - link "Svenska" [ref=e659] [cursor=pointer]:
+                        - /url: https://sv.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e660]:
+                      - link "Українська" [ref=e661] [cursor=pointer]:
+                        - /url: https://uk.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e662]:
+                      - link "Tiếng Việt" [ref=e663] [cursor=pointer]:
+                        - /url: https://vi.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e664]:
+                      - link "中文" [ref=e665] [cursor=pointer]:
+                        - /url: https://zh.wikipedia.org/wiki/
+                - listitem [ref=e666]:
+                  - heading "250,000+ articles" [level=3] [ref=e669]
+                  - list [ref=e672]:
+                    - listitem [ref=e673]:
+                      - link "Bahasa Indonesia" [ref=e674] [cursor=pointer]:
+                        - /url: https://id.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e675]:
+                      - link "Bahasa Melayu" [ref=e676] [cursor=pointer]:
+                        - /url: https://ms.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e677]:
+                      - link "Bân-lâm-gú" [ref=e678] [cursor=pointer]:
+                        - /url: https://zh-min-nan.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e679]:
+                      - link "Български" [ref=e680] [cursor=pointer]:
+                        - /url: https://bg.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e681]:
+                      - link "Català" [ref=e682] [cursor=pointer]:
+                        - /url: https://ca.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e683]:
+                      - link "Čeština" [ref=e684] [cursor=pointer]:
+                        - /url: https://cs.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e685]:
+                      - link "Dansk" [ref=e686] [cursor=pointer]:
+                        - /url: https://da.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e687]:
+                      - link "Eesti" [ref=e688] [cursor=pointer]:
+                        - /url: https://et.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e689]:
+                      - link "Ελληνικά" [ref=e690] [cursor=pointer]:
+                        - /url: https://el.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e691]:
+                      - link "Esperanto" [ref=e692] [cursor=pointer]:
+                        - /url: https://eo.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e693]:
+                      - link "Euskara" [ref=e694] [cursor=pointer]:
+                        - /url: https://eu.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e695]:
+                      - link "עברית" [ref=e696] [cursor=pointer]:
+                        - /url: https://he.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e697]:
+                      - link "Հայերեն" [ref=e698] [cursor=pointer]:
+                        - /url: https://hy.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e699]:
+                      - link "한국어" [ref=e700] [cursor=pointer]:
+                        - /url: https://ko.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e701]:
+                      - link "Magyar" [ref=e702] [cursor=pointer]:
+                        - /url: https://hu.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e703]:
+                      - link "Norsk bokmål" [ref=e704] [cursor=pointer]:
+                        - /url: https://no.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e705]:
+                      - link "Română" [ref=e706] [cursor=pointer]:
+                        - /url: https://ro.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e707]:
+                      - link "Simple English" [ref=e708] [cursor=pointer]:
+                        - /url: https://simple.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e709]:
+                      - link "Slovenčina" [ref=e710] [cursor=pointer]:
+                        - /url: https://sk.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e711]:
+                      - link "Srpski" [ref=e712] [cursor=pointer]:
+                        - /url: https://sr.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e713]:
+                      - link "Srpskohrvatski" [ref=e714] [cursor=pointer]:
+                        - /url: https://sh.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e715]:
+                      - link "Suomi" [ref=e716] [cursor=pointer]:
+                        - /url: https://fi.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e717]:
+                      - link "Türkçe" [ref=e718] [cursor=pointer]:
+                        - /url: https://tr.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e719]:
+                      - link "Oʻzbekcha" [ref=e720] [cursor=pointer]:
+                        - /url: https://uz.wikipedia.org/wiki/
+                - listitem [ref=e721]:
+                  - heading "50,000+ articles" [level=3] [ref=e724]
+                  - list [ref=e727]:
+                    - listitem [ref=e728]:
+                      - link "Asturianu" [ref=e729] [cursor=pointer]:
+                        - /url: https://ast.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e730]:
+                      - link "Azərbaycanca" [ref=e731] [cursor=pointer]:
+                        - /url: https://az.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e732]:
+                      - link "বাংলা" [ref=e733] [cursor=pointer]:
+                        - /url: https://bn.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e734]:
+                      - link "Bosanski" [ref=e735] [cursor=pointer]:
+                        - /url: https://bs.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e736]:
+                      - link "کوردی" [ref=e737] [cursor=pointer]:
+                        - /url: https://ckb.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e738]:
+                      - link "Frysk" [ref=e739] [cursor=pointer]:
+                        - /url: https://fy.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e740]:
+                      - link "Gaeilge" [ref=e741] [cursor=pointer]:
+                        - /url: https://ga.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e742]:
+                      - link "Galego" [ref=e743] [cursor=pointer]:
+                        - /url: https://gl.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e744]:
+                      - link "Hrvatski" [ref=e745] [cursor=pointer]:
+                        - /url: https://hr.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e746]:
+                      - link "ქართული" [ref=e747] [cursor=pointer]:
+                        - /url: https://ka.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e748]:
+                      - link "Kurdî" [ref=e749] [cursor=pointer]:
+                        - /url: https://ku.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e750]:
+                      - link "Latviešu" [ref=e751] [cursor=pointer]:
+                        - /url: https://lv.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e752]:
+                      - link "Lietuvių" [ref=e753] [cursor=pointer]:
+                        - /url: https://lt.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e754]:
+                      - link "മലയാളം" [ref=e755] [cursor=pointer]:
+                        - /url: https://ml.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e756]:
+                      - link "Македонски" [ref=e757] [cursor=pointer]:
+                        - /url: https://mk.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e758]:
+                      - link "မြန်မာဘာသာ" [ref=e759] [cursor=pointer]:
+                        - /url: https://my.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e760]:
+                      - link "Norsk nynorsk" [ref=e761] [cursor=pointer]:
+                        - /url: https://nn.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e762]:
+                      - link "ਪੰਜਾਬੀ" [ref=e763] [cursor=pointer]:
+                        - /url: https://pa.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e764]:
+                      - link "Shqip" [ref=e765] [cursor=pointer]:
+                        - /url: https://sq.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e766]:
+                      - link "Slovenščina" [ref=e767] [cursor=pointer]:
+                        - /url: https://sl.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e768]:
+                      - link "ไทย" [ref=e769] [cursor=pointer]:
+                        - /url: https://th.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e770]:
+                      - link "తెలుగు" [ref=e771] [cursor=pointer]:
+                        - /url: https://te.wikipedia.org/wiki/
+                      - text: ·
+                    - listitem [ref=e772]:
+                      - link "اردو" [ref=e773] [cursor=pointer]:
+                        - /url: https://ur.wikipedia.org/wiki/
+        - generic [ref=e774]:
+          - button "347 languages" [ref=e775] [cursor=pointer]
+          - generic [ref=e778]: 347 languages
+    - contentinfo [ref=e780]:
+      - list [ref=e781]:
+        - listitem [ref=e782]:
+          - text: Page was rendered with
+          - link "Parsoid" [ref=e783] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/wiki/Special:MyLanguage/Parsoid
+          - text: .
+        - listitem [ref=e784]:
+          - text: Text is available under the
+          - link "Creative Commons Attribution-ShareAlike 4.0 License" [ref=e785] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License
+          - text: ; additional terms may apply. By using this site, you agree to the
+          - link "Terms of Use" [ref=e786] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use
+          - text: and
+          - link "Privacy Policy" [ref=e787] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+          - text: . Wikipedia® is a registered trademark of the
+          - link "Wikimedia Foundation, Inc." [ref=e788] [cursor=pointer]:
+            - /url: https://wikimediafoundation.org/
+          - text: ", a non-profit organization."
+      - list:
+        - listitem [ref=e789]:
+          - link "Privacy policy" [ref=e790] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+        - listitem [ref=e791]:
+          - link "About Wikipedia" [ref=e792] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:About
+        - listitem [ref=e793]:
+          - link "Disclaimers" [ref=e794] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:General_disclaimer
+        - listitem [ref=e795]:
+          - link "Contact Wikipedia" [ref=e796] [cursor=pointer]:
+            - /url: //en.wikipedia.org/wiki/Wikipedia:Contact_us
+        - listitem [ref=e797]:
+          - link "Legal & safety contacts" [ref=e798] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information
+        - listitem [ref=e799]:
+          - link "Code of Conduct" [ref=e800] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct
+        - listitem [ref=e801]:
+          - link "Developers" [ref=e802] [cursor=pointer]:
+            - /url: https://developer.wikimedia.org
+        - listitem [ref=e803]:
+          - link "Statistics" [ref=e804] [cursor=pointer]:
+            - /url: https://stats.wikimedia.org/#/en.wikipedia.org
+        - listitem [ref=e805]:
+          - link "Cookie statement" [ref=e806] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement
+        - listitem [ref=e807]:
+          - link "Mobile view" [ref=e808] [cursor=pointer]:
+            - /url: //en.wikipedia.org/w/index.php?title=Main_Page&mobileaction=toggle_view_mobile
+      - list [ref=e809]:
+        - listitem [ref=e810]:
+          - link "Wikimedia Foundation" [ref=e811] [cursor=pointer]:
+            - /url: https://www.wikimedia.org/
+            - img "Wikimedia Foundation" [ref=e813]
+        - listitem [ref=e814]:
+          - link "Powered by MediaWiki" [ref=e815] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/
+            - img "Powered by MediaWiki" [ref=e817]
+  - generic [ref=e818]:
+    - list
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('handle new tab opened by clicking a link', async ({ page, context }) => {
+  4  |   await page.goto('https://www.wikipedia.org');
+  5  | 
+  6  |   // Listen for the new page BEFORE clicking
+  7  |   const [newPage] = await Promise.all([
+> 8  |     context.waitForEvent('page'),         // wait for new tab to open
+     |             ^ Error: browserContext.waitForEvent: Test timeout of 60000ms exceeded.
+  9  |     page.getByRole('link', { name: 'English' }).click() // click that opens new tab
+  10 |   ]);
+  11 | 
+  12 |   // Wait for new tab to fully load
+  13 |   await newPage.waitForLoadState('domcontentloaded');
+  14 | 
+  15 |   console.log('New tab URL:', newPage.url());
+  16 |   // Output: New tab URL: https://en.wikipedia.org/wiki/Main_Page
+  17 | 
+  18 |   await expect(newPage).toHaveURL(/en.wikipedia.org/);
+  19 |   await expect(newPage).toHaveTitle(/Wikipedia/);
+  20 | });
+```

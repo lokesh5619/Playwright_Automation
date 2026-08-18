@@ -1,4 +1,11 @@
 import { defineConfig, devices } from '@playwright/test';
+import * as dotenv from 'dotenv';
+import * as path from 'path';
+
+
+const env = process.env.ENV || 'dev';
+dotenv.config({ path: path.resolve(__dirname, `.env.${env}`) });
+
 
 /**
  * Read environment variables from file.
@@ -14,7 +21,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
 
-  timeout:120000,
+  timeout:60000,
 
   /* Run tests in files in parallel */
   fullyParallel:true,
@@ -47,44 +54,41 @@ export default defineConfig({
   ],
 
   /* Configure projects for major browsers */
-  projects: [
+   projects: [
+    // Run auth setup once before any browser project (skip with SKIP_AUTH=true)
+    {
+      name: 'setup',
+      testMatch: process.env.SKIP_AUTH ? /^$/ : /auth\.setup\.ts/,
+    },
+
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+        browserName: 'chromium',
+        storageState: process.env.SKIP_AUTH ? undefined : 'playwright/.auth/user.json',
+      },
+      dependencies: process.env.SKIP_AUTH ? [] : ['setup'],
     },
-
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      use: {
+        ...devices['Desktop Firefox'],
+        browserName: 'firefox',
+        storageState: process.env.SKIP_AUTH ? undefined : 'playwright/.auth/user.json',
+      },
+      dependencies: process.env.SKIP_AUTH ? [] : ['setup'],
     },
-
     {
-    
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      use: {
+        ...devices['Desktop Safari'],
+        browserName: 'webkit',
+        storageState: process.env.SKIP_AUTH ? undefined : 'playwright/.auth/user.json',
+      },
+      dependencies: process.env.SKIP_AUTH ? [] : ['setup'],
     },
-
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
   ],
-
   /* Run your local dev server before starting the tests */
   // webServer: {
   //   command: 'npm run start',
